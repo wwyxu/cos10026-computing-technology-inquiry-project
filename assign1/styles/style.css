@@ -130,3 +130,63 @@ letter-spacing: .4px;
 border-radius: 0px;
 border: 0px!important;
 } */
+
+/* ---- Index page ---- */
+#index-topic {
+    background-image: url("../assets/index-topic.jpg");
+}
+
+#index-quiz {
+    background-image: url("../assets/index-quiz.jpg");
+}
+
+#index-enhancements {
+    background-image: url("../assets/index-enhancements.jpg");
+}
+
+.index {
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.index-anchor {
+	color: white;
+	text-decoration: none;
+}
+
+.index-btn-container {
+    padding: 2em;
+}
+
+.index-button {
+    align-content: center;
+    background-color: #da0000;
+    border: none;
+    border-radius: 3.5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 0.7em 0.5em;
+}
+
+.index-button:hover {
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    background-color: skyblue;
+}
+
+.index-heading {
+	font-size: 2.75em;
+}
+
+.index-links {
+    height: 17em;
+    padding: 1.5em;
+}
+
+.index-description {
+	font-size: 1.3em;
+}
