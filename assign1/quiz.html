@@ -8,6 +8,8 @@
     <meta name="author" content="Team Name Here" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <title>Node.js - Technology Inquiry Project</title>
 </head>
 
@@ -29,82 +31,95 @@
 
     <main>
         <section>
-            <h2>Quiz</h2>
+            <h2 class="ml-5 my-3">Quiz</h2>
 
-            <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
-                <fieldset>
-                    <legend>Details</legend>
+            <div class="card mx-5 mb-5">
+                <div class="card-body">
+                    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+                        <fieldset>
+                            <legend>Details</legend>
 
-                    <label for="firstName">First
-                        Name</label><br>
-                    <input type="text" id="firstName" name="firstName" maxlength="15" size="10" pattern="[A-Za-z]{1,15}"
-                        required="required"><br>
+                            <label class="mr-2" for="firstName">First
+                                Name:</label>
+                            <input class="mr-2" type="text" id="firstName" name="firstName" maxlength="15" size="10"
+                                pattern="[A-Za-z]{1,15}" required="required">
 
-                    <label for="lastName">Last
-                        Name:</label><br>
-                    <input type="text" id="lastName" name="lastName" maxlength="15" size="10" pattern="[A-Za-z]{1,15}"
-                        required="required"><br>
+                            <label class="mr-2" for="lastName">Last
+                                Name:</label>
+                            <input class="mr-2" type="text" id="lastName" name="lastName" maxlength="15" size="10"
+                                pattern="[A-Za-z]{1,15}" required="required">
 
-                    <label for="studentId">Student ID:</label><br>
-                    <input type="text" name="studentId" id="studentId" size="10" pattern="\d{7}|\d{10}"
-                        required="required"><br>
-                </fieldset>
+                            <label class="mr-2" for="studentId">Student ID:</label>
+                            <input class="mr-2" type="text" name="studentId" id="studentId" size="10"
+                                pattern="\d{7}|\d{10}" required="required">
+                        </fieldset>
 
-                <fieldset>
-                    <legend for="question1">What language does Node.js support natively?</legend>
-                    <input type="text" id="question1" name="question1" maxlength="15" size="10" pattern="[A-Za-z]{1,15}"
-                        required="required"><br>
-                </fieldset>
+                        <fieldset>
+                            <legend for="question1">What language does Node.js support natively?</legend>
+                            <input class="mb-2" type="text" id="question1" name="question1" maxlength="15" size="10"
+                                pattern="[A-Za-z]{1,15}" required="required"><br>
+                        </fieldset>
 
-                <fieldset>
-                    <legend>What engine, developed by google, was Node.js built on?</legend>
+                        <fieldset>
+                            <legend>What engine, developed by google, was Node.js built on?</legend>
 
-                    <label><input type="radio" name="question2" value="v2" id="v2" required="required">V2</label>
+                            <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v2" id="v2"
+                                    required="required">V2</label>
 
-                    <label><input type="radio" name="question2" value="v4" id="v4">V4</label>
+                            <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v4"
+                                    id="v4">V4</label>
 
-                    <label><input type="radio" name="question2" value="v6" id="v6">V6</label>
+                            <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v6"
+                                    id="v6">V6</label>
 
-                    <label><input type="radio" name="question2" value="v8" id="v8">V8</label>
-                </fieldset>
+                            <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v8"
+                                    id="v8">V8</label>
+                        </fieldset>
 
-                <fieldset id="question3">
-                    <legend>Tick all of the following which apply to Node.js.</legend>
+                        <fieldset id="question3">
+                            <legend>Tick all of the following which apply to Node.js.</legend>
 
-                    <label><input type="checkbox" name="question3[]" value="quicksetup">Quick set up</label><br>
+                            <label><input class="mr-1" type="checkbox" name="question3[]" value="quicksetup">Quick set
+                                up</label><br>
 
-                    <label><input type="checkbox" name="question3[]" value="highrateofgrowth">High rate of
-                        growth</label><br>
+                            <label><input class="mr-1" type="checkbox" name="question3[]" value="highrateofgrowth">High
+                                rate of
+                                growth</label><br>
 
-                    <label><input type="checkbox" name="question3[]" value="multithreaded">Multi-threaded
-                        paradigm</label><br>
+                            <label><input class="mr-1" type="checkbox" name="question3[]"
+                                    value="multithreaded">Multi-threaded
+                                paradigm</label><br>
 
-                    <label><input type="checkbox" name="question3[]" value="javascriptengine">Uses the JavaScript
-                        Engine</label><br>
-                </fieldset>
+                            <label><input class="mr-1" type="checkbox" name="question3[]" value="javascriptengine">Uses
+                                the
+                                JavaScript
+                                Engine</label><br>
+                        </fieldset>
 
-                <fieldset>
-                    <legend>Who created Node.js?</legend>
-                    <select id="question4" name="question4" required>
-                        <option value="">Please Select</option>
+                        <fieldset>
+                            <legend>Who created Node.js?</legend>
+                            <select id="question4" name="question4" required>
+                                <option value="">Please Select</option>
 
-                        <option value="billgates">Bill Gates</option>
+                                <option value="billgates">Bill Gates</option>
 
-                        <option value="markzuck">Mark Zuckerberg</option>
+                                <option value="markzuck">Mark Zuckerberg</option>
 
-                        <option value="ryandahl">Ryan Dahl</option>
+                                <option value="ryandahl">Ryan Dahl</option>
 
-                        <option value="stevejobs">Steve Jobs</option>
-                    </select>
-                </fieldset>
+                                <option value="stevejobs">Steve Jobs</option>
+                            </select>
+                        </fieldset>
 
-                <fieldset>
-                    <legend>What year was the initial release date of Node.js?</legend>
-                    <input type="number" id="question5" name="question5" min="1000" max="9999">
-                </fieldset>
+                        <fieldset>
+                            <legend>What year was the initial release date of Node.js?</legend>
+                            <input type="number" id="question5" name="question5" min="1000" max="9999">
+                        </fieldset>
 
-                <input type="submit" value="Submit">
-            </form>
+                        <input class="mt-3" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
