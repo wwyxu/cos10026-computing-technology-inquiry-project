@@ -83,7 +83,7 @@ nav li a:hover {
 }
 
 .footer .footer-heading a:hover {
-    color: red;
+    color: #ffff;
     transition: 0.4s ease-out;
 }
 
@@ -110,7 +110,7 @@ nav li a:hover {
     width: 90px;
     height: 35px;
     border-radius: 3.5px;
-    background-color: #d31111;
+    background-color: rgb(59, 59, 59);
     outline: none;
     border: none;
     color: #ffff;
@@ -132,6 +132,7 @@ border: 0px!important;
 } */
 
 /* ---- Index page ---- */
+
 #index-topic {
     background-image: url("../assets/index-topic.jpg");
 }
