@@ -194,6 +194,10 @@ border: 0px!important;
 
 /* ---- Quiz ---- */
 
+ .quiz legend {
+   	font-size: 1.3em;
+ }
+
 /* .d-flex {
   display: flex;
 }
