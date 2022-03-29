@@ -132,18 +132,12 @@ border: 0px!important;
 } */
 
 /* ---- Index page ---- */
+/* Background images for the sections */
+#index-topic {background-image: url("../assets/index-topic.jpg");}
+#index-quiz {background-image: url("../assets/index-quiz.jpg");}
+#index-enhancements {background-image: url("../assets/index-enhancements.jpg");}
 
-#index-topic {
-    background-image: url("../assets/index-topic.jpg");
-}
-
-#index-quiz {
-    background-image: url("../assets/index-quiz.jpg");
-}
-
-#index-enhancements {
-    background-image: url("../assets/index-enhancements.jpg");
-}
+/* General index page settings */
 
 .index {
     background-position: center;
@@ -153,15 +147,12 @@ border: 0px!important;
     text-align: center;
 }
 
-.index-anchor {
-	color: white;
-	text-decoration: none;
-}
-
+/* Button margins (outside border)*/
 .index-btn-container {
     padding: 2em;
 }
 
+/* Anchor with rectangular background */
 .index-button {
     align-content: center;
     background-color: #da0000;
@@ -173,24 +164,19 @@ border: 0px!important;
     padding: 0.7em 0.5em;
 }
 
+/* Button transitions colour on hover */
 .index-button:hover {
     cursor: pointer;
     transition: all 0.5s ease-out;
     background-color: skyblue;
 }
 
-.index-heading {
-	font-size: 2.75em;
-}
+/* Font sizes */
+.index-heading {font-size: 2.75em;}
+.index-description {font-size: 1.3em;}
 
-.index-links {
-    height: 17em;
-    padding: 1.5em;
-}
-
-.index-description {
-	font-size: 1.3em;
-}
+/* No spaces between background images*/
+.index-links {padding: 1.5em;} 
 
 /* ---- Quiz ---- */
 
