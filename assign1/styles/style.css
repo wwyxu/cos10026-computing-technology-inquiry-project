@@ -55,7 +55,7 @@ nav li a:hover {
 
 /* ----- footer ---- */
 
-footer {
+.footer {
     background-color: #333333;
     padding: 3.5rem 0;
     color: #ffff;
@@ -65,33 +65,33 @@ footer {
     margin: 0 auto;
 }
 
-.footer-heading {
+.footer .footer-heading {
     display: flex;
     flex-direction: column;
     margin-right: 3.5rem;
     padding-bottom: 10px;
 }
 
-.footer-heading h2 {
+.footer .footer-heading h2 {
     margin-bottom: 1.5rem;
 }
 
-.footer-heading a {
+.footer .footer-heading a {
     color: #8ba545;
     text-decoration: none;
     margin-bottom: 0.5rem;
 }
 
-.footer-heading a:hover {
+.footer .footer-heading a:hover {
     color: red;
     transition: 0.4s ease-out;
 }
 
-.footer-email-form h2 {
+.footer .footer-email-form h2 {
     margin-bottom: 1.5rem;
 }
 
-#footer-email {
+.footer #footer-email {
     width: 240px;
     height: 35px;
     border-radius: 3.5px;
@@ -102,11 +102,11 @@ footer {
     margin-bottom: .5rem;
 }
 
-#footer-email::placeholder {
+.footer #footer-email::placeholder {
     color: black;
 }
 
-#footer-email-btn {
+.footer #footer-email-btn {
     width: 90px;
     height: 35px;
     border-radius: 3.5px;
@@ -117,7 +117,7 @@ footer {
     font-size: 1.5rem;
 }
 
-#footer-email-btn:hover {
+.footer #footer-email-btn:hover {
     cursor: pointer;
     background-color: skyblue;
     transition: all 0.5s ease-out;
