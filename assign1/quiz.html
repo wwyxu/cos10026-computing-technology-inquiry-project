@@ -8,8 +8,6 @@
     <meta name="author" content="Team Name Here" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <title>Node.js - Technology Inquiry Project</title>
 </head>
 
@@ -28,128 +26,120 @@
         </nav>
     </header>
 
-    <main>
+    <main id="quiz-background">
         <section class="quiz">
             <h2 class="ml-5 my-3">Quiz</h2>
 
-            <div class="card mx-5 mb-5">
-                <div class="card-body">
-                    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
-                        <fieldset>
-                            <legend>Details</legend>
 
-                            <div class="form-group">
-                                <label for="firstName">First
-                                    Name:</label>
-                                <input class="form-control" type="text" id="firstName" name="firstName" maxlength="15"
-                                    size="10" pattern="[A-Za-z]{1,15}" required="required" placeholder="First Name">
-                            </div>
+            <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+                <fieldset class="mb-3">
+                    <legend>Details</legend>
 
-                            <div class="form-group">
-                                <label for="lastName">Last
-                                    Name:</label>
-                                <input class="form-control" type="text" id="lastName" name="lastName" maxlength="15"
-                                    size="10" pattern="[A-Za-z]{1,15}" required="required" placeholder="Last Name">
-                            </div>
+                    <div class="form-group">
+                        <label for="firstName">First
+                            Name:</label>
+                        <input class="mb-3" type="text" id="firstName" name="firstName" maxlength="15" size="10"
+                            pattern="[A-Za-z]{1,15}" required="required" placeholder="First Name">
+                    </div>
 
-                            <div class="form-group">
-                                <label for="studentId">Student ID:</label>
-                                <input class="form-control" type="text" name="studentId" id="studentId" size="10"
-                                    pattern="\d{7}|\d{10}" required="required" placeholder="Student ID">
-                            </div>
-                        </fieldset>
+                    <div class="form-group">
+                        <label for="lastName">Last
+                            Name:</label>
+                        <input class="mb-3" type="text" id="lastName" name="lastName" maxlength="15" size="10"
+                            pattern="[A-Za-z]{1,15}" required="required" placeholder="Last Name">
+                    </div>
 
-                        <fieldset>
-                            <div class="form-group">
-                                <legend for="question1">Which language does Node.js support natively?</legend>
-                                <input class="mb-2 form-control" type="text" id="question1" name="question1"
-                                    maxlength="15" size="10" pattern="[A-Za-z]{1,15}" required="required">
-                            </div>
-                        </fieldset>
+                    <div class="form-group">
+                        <label for="studentId">Student ID:</label>
+                        <input type="text" name="studentId" id="studentId" size="10" pattern="\d{7}|\d{10}"
+                            required="required" placeholder="Student ID">
+                    </div>
+                </fieldset>
 
-                        <fieldset>
-                            <legend>What engine, developed by google, was Node.js built on?</legend>
+                <fieldset class="mb-3">
+                    <div class="form-group">
+                        <legend for="question1">Which language does Node.js support natively?</legend>
+                        <input class="mb-2 form-control" type="text" id="question1" name="question1" maxlength="15"
+                            size="10" pattern="[A-Za-z]{1,15}" required="required">
+                    </div>
+                </fieldset>
 
-                            <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v2" id="v2"
-                                    required="required">V2</label>
+                <fieldset class="mb-3">
+                    <legend>What engine, developed by google, was Node.js built on?</legend>
 
-                            <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v4"
-                                    id="v4">V4</label>
+                    <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v2" id="v2"
+                            required="required">V2</label>
 
-                            <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v6"
-                                    id="v6">V6</label>
+                    <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v4" id="v4">V4</label>
 
-                            <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v8"
-                                    id="v8">V8</label>
-                        </fieldset>
+                    <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v6" id="v6">V6</label>
 
-                        <fieldset id="question3">
-                            <legend>Tick all of the following which apply to Node.js.</legend>
+                    <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v8" id="v8">V8</label>
+                </fieldset>
 
-                            <label><input class="mr-2" type="checkbox" name="question3[]" value="quicksetup">Quick set
-                                up</label><br>
+                <fieldset class="mb-3" id="question3">
+                    <legend>Tick all of the following which apply to Node.js.</legend>
 
-                            <label><input class="mr-2" type="checkbox" name="question3[]" value="highrateofgrowth">High
-                                rate of
-                                growth</label><br>
+                    <label><input class="mr-2" type="checkbox" name="question3[]" value="quicksetup">Quick set
+                        up</label><br>
 
-                            <label><input class="mr-2" type="checkbox" name="question3[]"
-                                    value="multithreaded">Multi-threaded
-                                paradigm</label><br>
+                    <label><input class="mr-2" type="checkbox" name="question3[]" value="highrateofgrowth">High
+                        rate of
+                        growth</label><br>
 
-                            <label><input class="mr-2" type="checkbox" name="question3[]" value="javascriptengine">Uses
-                                the
-                                JavaScript
-                                Engine</label><br>
-                        </fieldset>
+                    <label><input class="mr-2" type="checkbox" name="question3[]" value="multithreaded">Multi-threaded
+                        paradigm</label><br>
 
-                        <fieldset>
-                            <legend>Who created Node.js?</legend>
-                            <select class="custom-select mr-sm-2 mb-3" id="question4" name="question4" required>
-                                <option value="">Please Select</option>
+                    <label><input class="mr-2" type="checkbox" name="question3[]" value="javascriptengine">Uses
+                        the
+                        JavaScript
+                        Engine</label><br>
+                </fieldset>
 
-                                <option value="billgates">Bill Gates</option>
+                <fieldset>
+                    <legend>Who created Node.js?</legend>
+                    <select class="custom-select mb-3" id="question4" name="question4" required>
+                        <option value="">Please Select</option>
 
-                                <option value="markzuck">Mark Zuckerberg</option>
+                        <option value="billgates">Bill Gates</option>
 
-                                <option value="ryandahl">Ryan Dahl</option>
+                        <option value="markzuck">Mark Zuckerberg</option>
 
-                                <option value="stevejobs">Steve Jobs</option>
-                            </select>
-                        </fieldset>
+                        <option value="ryandahl">Ryan Dahl</option>
 
-                        <fieldset>
-                            <div class="form-group">
-                                <legend>What year was the initial release date of Node.js?</legend>
-                                <input class="form-control" type="number" id="question5" name="question5" min="1000"
-                                    max="9999">
-                            </div>
-                        </fieldset>
+                        <option value="stevejobs">Steve Jobs</option>
+                    </select>
+                </fieldset>
 
-                        <button class="btn btn-primary" type="submit">Submit form</button>
-                    </form>
-                </div>
-            </div>
+                <fieldset>
+                    <div class="form-group">
+                        <legend>What year was the initial release date of Node.js?</legend>
+                        <input class="form-control" type="number" id="question5" name="question5" min="1000" max="9999">
+                    </div>
+                </fieldset>
+
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </form>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer-heading">
-            <h2>About Us</h2>
+            <h2>About</h2>
             <a href="http://www.swinburne.edu.au/">School</a>
             <a href="https://www.investopedia.com/articles/investing/012715/5-richest-people-world.asp">Investors</a>
             <a href="https://www.entrepreneur.com/article/240492">Blog</a>
             <a href="https://www.facebook.com">Facebook Page</a>
         </div>
         <div class="footer-heading">
-            <h2>Contact Us</h2>
+            <h2>Contact</h2>
             <a href="https://www.racv.com.au/">Support</a>
             <a href="http://www.google.com/gmail">Email</a>
             <a href="https://www.discord.com">Discord</a>
             <a href="https://www.youtube.com">Youtube</a>
         </div>
         <div class="footer-heading">
-            <h2>Group Members</h2>
+            <h2>Group</h2>
             <a href="#">Archer</a>
             <a href="#">Ben</a>
             <a href="#">William</a>
