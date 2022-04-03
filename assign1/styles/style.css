@@ -297,7 +297,7 @@ footer #footer-email-btn:hover {
     border-color: #111111;
     padding: 3px;
     background-color: #333333;
-    width: 50%;
+    width: 100%;
     position: relative;
     bottom: 275px;
 }
@@ -352,9 +352,10 @@ td {
     left: 1000px;
     width: 25%; */
     position: absolute;
-    top: 1200px;
+    /* top: 1200px; */
     right: 200px;
-    width: 22%;
+    max-width: 300px;
+    bottom: 100px;
 }
 
 .topic-definitions h2 {
