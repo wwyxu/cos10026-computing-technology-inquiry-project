@@ -6,36 +6,212 @@
     <meta name="description" content="Node.js" />
     <meta name="keywords" content="Node.js, Technology Inquiry Project" />
     <meta name="author" content="Team Name Here" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Node.js - Technology Inquiry Project</title>
 </head>
 
-<body>
-
+<body id="topic_body_background">
     <header>
         <nav>
             <ul>
                 <li>
-                    <a href="index.html"><img src="assets/nodejslogo.png" height="28px"></a>
+                    <a class="logo" href="index.html"><img src="assets/nodejslogo.png" width="30px"></a>
                 </li>
                 <li><a href="index.html">Home</a></li>
-                <li class="selected"><a href="topic.html">Topic</a></li>
+                <li><a class="selected" href="topic.html">Topic</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="enhancements.html">Enhancements</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <p>Topic</p>
-        </section>
-    </main>
+    <section class="topic-introduction" id="topic-introduction">
+        <h2>What is Node.JS?</h2>
+        <p>
+            Node.js is an open-source, cross-platform runtime environment for executing back-end JavaScript code outside
+            a web browser (means you don’t need to combine multiple languages to use JavaScript). It simplifies the way
+            websites are created and allows JavaScript run more efficiently and effectively and have much more support.
+            Before NodeJS, there were no other real JavaScript alternatives, as it was more of a server-side language.
+            <br>
 
-    <footer class="footer">
+            Ryan Dahl initially released NodeJS on the 27th of May 2009. The Node.js Foundation was formed in 2015 to
+            increase Node.js adoption and speed up development of the Node.js ecosystem. It was formed as a neutral
+            body, and used an ‘open governance model’ to increase participation in development. The Technical Steering
+            Committee (TSC) is the governing body of Node.js that handles technical issues, such as the Node.js
+            codebase. The current managing group of Node.js is the OpenJS Foundation, which was formed when the Node.js
+            Foundation and JS Foundation merged in 2019. <a href="#para1">+</a>
+        </p>
+        <section class="topic-advantages" id="topic-advantages">
+            <h4>Advantages of using Node.JS: <a href="#para1">+</a></h4>
+            <!--May use as a topic?-->
+            <ol id="advantages">
+                <!--Ordered List-->
+                <li>Quick to set up</li>
+                <li>Uses the same language used for front end scripting</li>
+                <li>High growth rate</li>
+                <li>Single threaded but highly scalable - Very fast</li>
+                <li>Event driven</li>
+            </ol>
+        </section>
+    </section>
+    <section class="topic-growth" id="topic-growth">
+        <h2>Node.JS Growth</h2>
+        <p>
+            Since it’s initial release in 2009, Node.js as a back-end Javascript runtime environment has been a huge hit
+            in sever-side development and is a global leader in frameworks. According to Stack Overflow’s Developer
+            Survey conducted in 2021, Node.js ranked 6th in programming, scripting, and markup languages with 33.91%
+            from 83,000 responses. Comparing this result to previous years, Node.js has increased in popularity
+            continuously. Node.js has a big future ahead. The momentum it has gained over the past few years has caused
+            it to become the most popular JS language framework for new devs. IoT development using Node.js is a major
+            reason behind the longevity of the framework due to countless new technologies being released each year
+            requiring low server-side demands, minimal memory usage and flexibility. The growth and long term demand
+            trends seen for the framework will continue into the future as more developers learn and implement it into
+            applications, IoT and the cloud. <a href="#para2">+</a>
+        </p>
+        <figure>
+            <figcaption>Graph of popular languages from survey conducted in 2021 <br>(Stack Overflow Developer Survey
+                2021, 2022)</figcaption>
+            <a
+                href="https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages">
+                <img src="assets/SurveyGraphNodejs.png">
+            </a>
+        </figure>
+    </section>
+    <section class="topic-competition" id="topic-competition">
+        <h2>Node.JS Main Competition</h2>
+        <p>
+            The main competitors to Node.js are PHP (Laravel), Python (Django, Flask), Ruby, Java (Spring), .NET. One of
+            Node.js’s main advantage is that it uses JavaScript, developers familiar with frontend development do not
+            need to learn another language to develop server side. This, coupled with its easy set up contributes to a
+            quick learning experience for developers. As Node.js is a relatively new technology, it does not have the
+            same level of support as other mature, trenched competitors such as Java (Spring) or PHP (Laravel). The
+            upside of this however, is that it has an increasingly high rate of growth and will continue to see support
+            for many coming generations.<a href="#para3">+</a>
+        </p>
+    </section>
+    <section class="topic-table" id="topic-table">
+        <h2>NodeJS Competition Table <a href="#tableref">+</a></h2>
+        <table>
+            <!--Table https://www.toptal.com/back-end/server-side-io-performance-node-php-java-go-->
+            <thead>
+                <tr>
+                    <td>Language</td>
+                    <td>Non-blocking I/O</td>
+                    <td>Limitations</td>
+                    <td>% of users (in general)</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Node.JS</td>
+                    <td>Yes</td>
+                    <td>Single-threaded event loop</td>
+                    <td>33.91%</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>Yes (API available)</td>
+                    <td>Complex code. Requires more memory compared to others</td>
+                    <td>35.35%</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Yes (Library available)</td>
+                    <td>Python code execution slower than competition</td>
+                    <td>48.24%</td>
+                </tr>
+                <tr>
+                    <td>Ruby</td>
+                    <td>Yes</td>
+                    <td>Slower runtime - less responsive</td>
+                    <td>7.04%</td>
+                </tr>
+                <tr>
+                    <td>.NET</td>
+                    <td>Yes</td>
+                    <td>Memory leaks/memory issues</td>
+                    <td>18.1%</td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>No</td>
+                    <td>Poor error handling and security</td>
+                    <td>21.98%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="topic-definitions" id="topic-definitions">
+        <h2>Definition List</h2>
+        <dl>
+            <!--Definition List-->
+            <dt>Back-end:</dt>
+            <dd>-Back-end refers to the server-side portion of web development. This is the the part of a website the
+                user doesn't see. Refer to the table for examples of back-end languages.</dd>
+            <dt>JavaScript:</dt>
+            <dd>-JavaScript is a scripting language used in websites in partnership with HTML and CSS. It's main use is
+                to control a websites behaviour on the users side. </dd>
+            <dt>IoT:</dt>
+            <dd>-IoT stands for Internet of Things, a wide variety of devices that are collectively connected to the
+                internet. Example of these devices include sensors, appliances, lights, wearable tech, etc.</dd>
+            <dt>Single threaded:</dt>
+            <dd>-Single threaded in Node.JS refers to the language using a single thread for the event loop, meaning the
+                event loop will execute singular instructions at a time.</dd>
+        </dl>
+    </section>
+    <div class="references" id="referenceslist">
+        <p id="para1">
+            GeeksforGeeks. 2022. Explain the working of Node.js - GeeksforGeeks. [online] Available at:
+            https://www.geeksforgeeks.org/explain-the-working-of-node-js/#:~:text=to%20multiple%20clients.-,Node.,blocking%20it%20for%20one%20request.&text=Non%2Dblocking%20I%2Fo%3A,thread%20for%20a%20single%20request
+            [Accessed 28 March 2022]. <br>
+            Toptal Engineering Blog. 2022. Why The Hell Would I Use Node.js? A Case-by-Case Tutorial. [online] Available
+            at: https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js [Accessed 2 April 2022]. <br>
+            Engineering Education (EngEd) Program | Section. 2022. The History of Node.js. [online] Available at:
+            https://www.section.io/engineering-education/history-of-nodejs/#:~:text=As%20many%20browsers%20competed%20to,the%20right%20place%20and%20time
+            [Accessed 28 March 2022].<br>
+            GitHub. 2022. GitHub - nodejs/TSC: The Node.js Technical Steering Committee. [online] Available at:
+            https://github.com/nodejs/TSC [Accessed 28 March 2022].<br>
+            H-online.com. 2022. The Node.js creation story - The H Open: News and Features. [online] Available at:
+            http://www.h-online.com/open/features/The-H-Speed-Guide-to-Node-js-1363974.html%3Fpage=2 [Accessed 28 March
+            2022].
+        </p>
+        <p id="para2">
+            AltexSoft. 2022. The Good and the Bad of Node.js Web App Development. [online] Available at:
+            https://www.altexsoft.com/blog/engineering/the-good-and-the-bad-of-node-js-web-app-development/[Accessed 28
+            March 2022].<br>
+            Kaneriya, T. and Kaneriya, T., 2022. Advantages & Disadvantages of Node.js : Why to Use Node.js?. [online]
+            Insights on Latest Technologies - Simform Blog. Available at:
+            https://www.simform.com/blog/nodejs-advantages-disadvantages/ [Accessed 28 March 2022].<br>
+            Thirdrocktechkno.com. 2022. [online] Available at:
+            https://www.thirdrocktechkno.com/blog/most-prominent-node-js-development-trends-in-2020/ [Accessed 28 March
+            2022].<br>
+            Stack Overflow. 2022. Stack Overflow Developer Survey 2021. [online] Available at:
+            https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages
+            [Accessed 28 March 2022].<br>
+        </p>
+        <p id="tableref">
+            Back4App Blog. 2022. The Best 10 Server Side Coding Languages. [online] Available at:
+            https://blog.back4app.com/server-side-coding-languages/ [Accessed 28 March 2022].<br>
+            Toptal Engineering Blog. 2022. Server-side I/O Performance: Node vs. PHP vs. Java vs. Go. [online] Available
+            at: https://www.toptal.com/back-end/server-side-io-performance-node-php-java-go [Accessed 28 March
+            2022].<br>
+        </p>
+        <p id="para3">
+            Brainvire.com -. 2022. Node.js, PHP or Java: Which One Should You Choose for Web Development -
+            Brainvire.com. [online] Available at: https://www.brainvire.com/blog/why-is-node-js-better-than-php-java/
+            [Accessed 28 March 2022].
+        </p>
+    </div>
+    <div class="side-navigation">
+        <p><a href="#topic-introduction">What is Node.JS?</a></p>
+        <p><a href="#topic-advantages">Advantages</a></p>
+        <p><a href="#topic-growth">Growth</a></p>
+        <p><a href="#topic-competition">Competition</a></p>
+        <p><a href="#topic-table">Table</a></p>
+        <p><a href="#topic-definitions">Definitions</a></p>
+    </div>
+    <footer>
         <div class="footer-heading">
             <h2>About Us</h2>
             <a href="http://www.swinburne.edu.au/">School</a>
@@ -64,6 +240,7 @@
             <input type="submit" value="sign up" id="footer-email-btn">
         </div>
     </footer>
+
 </body>
 
 </html>

@@ -55,7 +55,7 @@ nav li a:hover {
 
 /* ----- footer ---- */
 
-.footer {
+footer {
     background-color: #333333;
     padding: 3.5rem 0;
     color: #ffff;
@@ -65,33 +65,33 @@ nav li a:hover {
     margin: 0 auto;
 }
 
-.footer .footer-heading {
+.footer-heading {
     display: flex;
     flex-direction: column;
     margin-right: 3.5rem;
     padding-bottom: 10px;
 }
 
-.footer .footer-heading h2 {
+.footer-heading h2 {
     margin-bottom: 1.5rem;
 }
 
-.footer .footer-heading a {
+.footer-heading a {
     color: #8ba545;
     text-decoration: none;
     margin-bottom: 0.5rem;
 }
 
-.footer .footer-heading a:hover {
-    color: #ffff;
+.footer-heading a:hover {
+    color: red;
     transition: 0.4s ease-out;
 }
 
-.footer .footer-email-form h2 {
+.footer-email-form h2 {
     margin-bottom: 1.5rem;
 }
 
-.footer #footer-email {
+#footer-email {
     width: 240px;
     height: 35px;
     border-radius: 3.5px;
@@ -102,22 +102,22 @@ nav li a:hover {
     margin-bottom: .5rem;
 }
 
-.footer #footer-email::placeholder {
+#footer-email::placeholder {
     color: black;
 }
 
-.footer #footer-email-btn {
+#footer-email-btn {
     width: 90px;
     height: 35px;
     border-radius: 3.5px;
-    background-color: rgb(59, 59, 59);
+    background-color: #d31111;
     outline: none;
     border: none;
     color: #ffff;
     font-size: 1.5rem;
 }
 
-.footer #footer-email-btn:hover {
+#footer-email-btn:hover {
     cursor: pointer;
     background-color: skyblue;
     transition: all 0.5s ease-out;
@@ -132,12 +132,17 @@ border: 0px!important;
 } */
 
 /* ---- Index page ---- */
-/* Background images for the sections */
-#index-topic {background-image: url("../assets/index-topic.jpg");}
-#index-quiz {background-image: url("../assets/index-quiz.jpg");}
-#index-enhancements {background-image: url("../assets/index-enhancements.jpg");}
+#index-topic {
+    background-image: url("../assets/index-topic.jpg");
+}
 
-/* General index page settings */
+#index-quiz {
+    background-image: url("../assets/index-quiz.jpg");
+}
+
+#index-enhancements {
+    background-image: url("../assets/index-enhancements.jpg");
+}
 
 .index {
     background-position: center;
@@ -147,12 +152,15 @@ border: 0px!important;
     text-align: center;
 }
 
-/* Button margins (outside border)*/
+.index-anchor {
+    color: white;
+    text-decoration: none;
+}
+
 .index-btn-container {
     padding: 2em;
 }
 
-/* Anchor with rectangular background */
 .index-button {
     align-content: center;
     background-color: #da0000;
@@ -164,36 +172,241 @@ border: 0px!important;
     padding: 0.7em 0.5em;
 }
 
-/* Button transitions colour on hover */
 .index-button:hover {
     cursor: pointer;
     transition: all 0.5s ease-out;
     background-color: skyblue;
 }
 
-/* Font sizes */
-.index-heading {font-size: 2.75em;}
-.index-description {font-size: 1.3em;}
-
-/* No spaces between background images*/
-.index-links {padding: 1.5em;} 
-
-/* ---- Quiz ---- */
-
- .quiz legend {
-   	font-size: 1.3em;
-    font-weight: 500;
- }
-
- .quiz label {
-   	color: rgb(52, 52, 52) !important;
- }
-
-
-/* .d-flex {
-  display: flex;
+.index-heading {
+    font-size: 2.75em;
 }
 
-.space-evenly {
-    justify-content: space-evenly;
-} */
+.index-links {
+    height: 17em;
+    padding: 1.5em;
+}
+
+.index-description {
+    font-size: 1.3em;
+}
+
+/* topic page! */
+.topic-introduction p {
+    font-size: 18px;
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: #333333;
+    width: 50%;
+    float: left;
+}
+
+.topic-introduction h2 {
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: #333333;
+    width: fit-content;
+}
+
+.topic-advantages {
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: #333333;
+    width: fit-content;
+    float: left;
+    margin-left: 10%;
+}
+
+.topic-growth p {
+    font-size: 18px;
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: #333333;
+    width: 50%;
+    position: relative;
+    top: 150px;
+}
+
+.topic-growth h2 {
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: #333333;
+    width: fit-content;
+    position: relative;
+    clear: both;
+    top: 150px;
+}
+
+.topic-growth figure a img {
+    width: 400px;
+    height: 510px;
+    position: relative;
+    bottom: 300px;
+    left: 63.5%;
+}
+
+.topic-growth figure figcaption {
+    position: relative;
+    bottom: 300px;
+    left: 63.25%;
+    margin-right: 20%;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: #333333;
+    width: fit-content;
+    clear: both;
+}
+
+.topic-competition h2 {
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: #333333;
+    width: fit-content;
+    clear: both;
+    position: relative;
+    bottom: 275px;
+}
+
+.topic-competition p {
+    font-size: 18px;
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: #333333;
+    width: 50%;
+    position: relative;
+    bottom: 275px;
+}
+
+.topic-table h2 {
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: #333333;
+    width: fit-content;
+    clear: both;
+    position: relative;
+    bottom: 200px;
+}
+
+.topic-table table {
+    background-color: #333333;
+    position: relative;
+    bottom: 200px;
+    margin-left: 10px;
+}
+
+.topic-table tr,
+td {
+    background-color: #333333;
+    color: #fff;
+    width: fit-content;
+    text-align: left;
+    padding: 10px;
+
+}
+
+.topic-table thead tr td {
+    background-color: #212121;
+    padding: 10px;
+    border: 1px solid #212121;
+}
+
+
+#topic_body_background {
+    background-image: url("../assets/index-topic.jpg");
+}
+
+.topic-definitions dl {
+    padding: 0.5em;
+}
+
+.topic-definitions dt {
+    text-align: right;
+    font-weight: bold;
+    color: #fff;
+    width: fit-content;
+}
+
+.topic-definitions dd {
+    width: fit-content;
+    margin-left: 15%;
+    color: #fff;
+}
+
+.topic-definitions {
+    clear: both;
+    border: #111111 solid;
+    background-color: #333333;
+    position: relative;
+    bottom: 775px;
+    left: 1000px;
+    width: 25%;
+
+}
+
+.topic-definitions h2 {
+    color: #fff;
+
+}
+
+.references {
+    background-color: #333333;
+}
+
+.references p {
+    font-size: 10px;
+    margin: 10px;
+    color: #fff;
+    padding: 3px;
+    background-color: #333333;
+    font-style: italic;
+}
+
+.side-navigation {
+    position: fixed;
+    bottom: 300px;
+    right: 0%;
+    text-decoration-line: none;
+    padding: 0.2em 0.6em;
+    border: 4px solid #111111;
+    text-decoration-color: #ccc;
+    background-color: #333333;
+
+}
+
+.side-navigation a:link,
+.side-navigation a:visited,
+.side-navigation a:hover,
+.side-navigationa: active {
+    text-decoration-line: none;
+    text-decoration-color: #ccc;
+    text-decoration: none;
+    color: #ccc;
+}
