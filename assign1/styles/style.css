@@ -114,6 +114,7 @@ footer #footer-email-btn {
     text-decoration: none;
     font-size: 1.3em;
     padding: 0.15em 0.5em;
+    margin-top: 8px;
 }
 
 footer #footer-email-btn:hover {
@@ -125,6 +126,10 @@ footer #footer-email-btn:hover {
 }
 
 /* ---- Index page ---- */
+#index-introduction {
+    background-image: url("../assets/index-topic.jpg");
+}
+
 #index-topic {
     background-image: url("../assets/index-topic.jpg");
 }
@@ -338,6 +343,24 @@ td {
     background-image: url("../assets/index-topic.jpg");
 }
 
+.topic-definitions {
+    clear: both;
+    border: #111111 solid;
+    background-color: #333333;
+    /* position: relative;
+    bottom: 775px;
+    left: 1000px;
+    width: 25%; */
+    position: absolute;
+    top: 1200px;
+    right: 200px;
+    width: 22%;
+}
+
+.topic-definitions h2 {
+    color: #fff;
+}
+
 .topic-definitions dl {
     padding: 0.5em;
 }
@@ -352,20 +375,6 @@ td {
 .topic-definitions dd {
     width: fit-content;
     margin-left: 15%;
-    color: #fff;
-}
-
-.topic-definitions {
-    clear: both;
-    border: #111111 solid;
-    background-color: #333333;
-    position: relative;
-    bottom: 775px;
-    left: 1000px;
-    width: 25%;
-}
-
-.topic-definitions h2 {
     color: #fff;
 }
 
