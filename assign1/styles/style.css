@@ -1,23 +1,21 @@
-/* ----- nav ---- */
+/* ----- global ---- */
+
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ----- nav ---- */
 nav .logo {
-    margin: 0px !important;
-    padding: 0px !important;
+    width: 70px;
+    height: 100%;
 }
 
 nav .logo img {
-    padding: 0px 12px 0px 12px;
-}
-
-nav a:active,
-nav li .selected {
-    background-color: yellow;
+    position: absolute;
+    left: 20px;
+    top: 15px;
 }
 
 nav ul {
@@ -30,8 +28,8 @@ nav ul {
 
 nav ul .selected {
     list-style-type: none;
-    margin: 1px;
-    padding: 0;
+    /* margin: 1px;
+    padding: 0; */
     overflow: hidden;
     background: #82b63e !important;
 }
@@ -41,57 +39,58 @@ nav li {
 }
 
 nav li a {
-    font: 400 20px/1.5 Helvetica, Arial, sans-serif;
     display: block;
     color: white;
     text-align: center;
-    padding: 24px;
+    padding: 20px 35px;
     text-decoration: none;
 }
 
-nav li a:hover {
+nav li a:hover:not(.logo) {
     background: #111111;
+    text-decoration: none !important;
+    color: white;
 }
 
 /* ----- footer ---- */
 
-footer {
+.footer {
     background-color: #333333;
-    padding: 3.5rem 0;
     color: #ffff;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.footer-heading {
+footer .footer-heading {
     display: flex;
     flex-direction: column;
     margin-right: 3.5rem;
-    padding-bottom: 10px;
 }
 
-.footer-heading h2 {
+footer .footer-heading h2 {
     margin-bottom: 1.5rem;
 }
 
-.footer-heading a {
+footer .footer-heading a {
     color: #8ba545;
     text-decoration: none;
     margin-bottom: 0.5rem;
 }
 
-.footer-heading a:hover {
+footer .footer-heading a:hover {
     color: red;
     transition: 0.4s ease-out;
 }
 
-.footer-email-form h2 {
+footer .footer-email-form h2 {
     margin-bottom: 1.5rem;
 }
 
-#footer-email {
+footer #footer-email {
     width: 240px;
     height: 35px;
     border-radius: 3.5px;
@@ -102,11 +101,11 @@ footer {
     margin-bottom: .5rem;
 }
 
-#footer-email::placeholder {
+footer #footer-email::placeholder {
     color: black;
 }
 
-#footer-email-btn {
+footer #footer-email-btn {
     width: 90px;
     height: 35px;
     border-radius: 3.5px;
@@ -117,19 +116,11 @@ footer {
     font-size: 1.5rem;
 }
 
-#footer-email-btn:hover {
+footer #footer-email-btn:hover {
     cursor: pointer;
     background-color: skyblue;
     transition: all 0.5s ease-out;
 }
-
-/* ----- footer ---- */
-
-/* fieldset {
-letter-spacing: .4px;
-border-radius: 0px;
-border: 0px!important;
-} */
 
 /* ---- Index page ---- */
 #index-topic {
@@ -404,7 +395,7 @@ td {
 .side-navigation a:link,
 .side-navigation a:visited,
 .side-navigation a:hover,
-.side-navigationa: active {
+.side-navigationa a:active {
     text-decoration-line: none;
     text-decoration-color: #ccc;
     text-decoration: none;
