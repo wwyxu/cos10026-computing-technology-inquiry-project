@@ -16,6 +16,12 @@
     width: 50%;
     padding: 10px;
     background: transparent;
+
+}
+
+.row {
+    max-width: 1300px;
+    margin: auto
 }
 
 .row:after {
@@ -35,6 +41,10 @@
 
     .topic-growth {
         margin-top: 150px;
+    }
+
+    .topic-growth figure {
+        margin-top: 100px;
     }
 
     .topic-competition {
@@ -108,10 +118,6 @@
     padding: 13px;
     width: fit-content;
     clear: both;
-}
-
-.topic-growth figure {
-    margin-top: 100px;
 }
 
 .topic-growth figure a img {
