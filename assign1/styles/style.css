@@ -82,8 +82,8 @@ footer .footer-heading a {
 }
 
 footer .footer-heading a:hover {
-    color: red;
-    transition: 0.4s ease-out;
+    color: white;
+    transition: 0.2s ease-out;
 }
 
 footer .footer-email-form h2 {
@@ -106,20 +106,22 @@ footer #footer-email::placeholder {
 }
 
 footer #footer-email-btn {
-    width: 90px;
-    height: 35px;
-    border-radius: 3.5px;
-    background-color: #d31111;
-    outline: none;
+    align-content: center;
+    background-color: #444444;
     border: none;
-    color: #ffff;
-    font-size: 1.5rem;
+    border-radius: 3.5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 0.15em 0.5em;
 }
 
 footer #footer-email-btn:hover {
     cursor: pointer;
-    background-color: skyblue;
-    transition: all 0.5s ease-out;
+    transition: all 0.2s ease-out;
+    background-color: #82b63e;
+    color: white;
+    text-decoration: none;
 }
 
 /* ---- Index page ---- */
@@ -154,7 +156,7 @@ footer #footer-email-btn:hover {
 
 .index-button {
     align-content: center;
-    background-color: #da0000;
+    background-color: #444444;
     border: none;
     border-radius: 3.5px;
     color: white;
@@ -166,7 +168,9 @@ footer #footer-email-btn:hover {
 .index-button:hover {
     cursor: pointer;
     transition: all 0.5s ease-out;
-    background-color: skyblue;
+    background-color: #82b63e;
+    color: white;
+    text-decoration: none;
 }
 
 .index-heading {
