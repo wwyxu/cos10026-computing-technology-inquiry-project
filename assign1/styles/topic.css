@@ -140,11 +140,11 @@
 /* ---- */
 
 .topic-competition h1 {
-    margin: 10px;
+    margin: 10px 0px;
     color: #fff;
     border-style: solid;
     border-color: #111111;
-    padding: 3px;
+
     background-color: #333333;
     padding: 13px;
     width: fit-content;
@@ -153,23 +153,21 @@
 
 .topic-competition p {
     font-size: 18px;
-    margin: 10px;
+    margin: 10px 0px;
     color: #fff;
     border-style: solid;
     border-color: #111111;
-    padding: 3px;
     background-color: #333333;
     padding: 13px;
 }
 
 .topic-table h1 {
-    margin: 10px;
     color: #fff;
     border-style: solid;
     border-color: #111111;
-    padding: 3px;
     background-color: #333333;
     padding: 13px;
+    margin-bottom: 10px;
     width: fit-content;
     clear: both;
 }
@@ -187,7 +185,6 @@ td {
     /* width: fit-content;
     text-align: left; */
     padding: 10px;
-
 }
 
 .topic-table thead tr td {
@@ -197,19 +194,32 @@ td {
 }
 
 
-.topic-definitions {
-    clear: both;
-    border: #111111 solid;
-    background-color: #333333;
-    padding: 13px;
-}
-
 .topic-definitions h1 {
     color: #fff;
 }
 
+.topic-definitions h1 {
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: #333333;
+    padding: 13px;
+    width: fit-content;
+    clear: both;
+}
+
 .topic-definitions dl {
     padding: 0.5em;
+    font-size: 18px;
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: #333333;
+    padding: 13px;
 }
 
 .topic-definitions dt {
