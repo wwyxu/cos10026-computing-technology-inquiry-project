@@ -46,17 +46,7 @@
     font-weight: 500;
 }
 
-.quiz input:not([type="checkbox"]):not([type="radio"]) {
-    width: calc(100% - 18px);
-    height: 2em;
-    border: 0;
-    border-radius: 2px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    padding-left: 9px;
-    padding-right: 9px;
-}
-
+.quiz input:not([type="checkbox"]):not([type="radio"]),
 .quiz select {
     width: 100%;
     height: 2em;

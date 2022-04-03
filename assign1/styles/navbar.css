@@ -37,7 +37,7 @@ nav li a {
 }
 
 nav li a:hover:not(.logo) {
-    background: #111111;
+    background: #393939;
     text-decoration: none !important;
     color: white;
 }

@@ -58,6 +58,10 @@
     .topic-table {
         margin-top: 120px;
     }
+
+    .topic-advantages {
+        margin-left: 10%;
+    }
 }
 
 /* End of Columns */
@@ -85,7 +89,6 @@
 }
 
 .topic-advantages {
-    margin: 10px;
     color: #fff;
     border-style: solid;
     border-color: #111111;
@@ -94,7 +97,7 @@
     padding: 13px;
     width: fit-content;
     float: left;
-    margin-left: 10%;
+    margin: 10px;
 }
 
 .topic-growth p {
