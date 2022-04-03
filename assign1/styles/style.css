@@ -114,7 +114,7 @@ footer #footer-email-btn {
     text-decoration: none;
     font-size: 1.3em;
     padding: 0.15em 0.5em;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 footer #footer-email-btn:hover {
@@ -131,15 +131,15 @@ footer #footer-email-btn:hover {
 }
 
 #index-topic {
-    background-image: url("../assets/index-topic.jpg");
+    background-image: url("../assets/index-introduction.webp");
 }
 
 #index-quiz {
-    background-image: url("../assets/index-quiz.jpg");
+    background-image: url("../assets/index-enhancements.jpg");
 }
 
 #index-enhancements {
-    background-image: url("../assets/index-enhancements.jpg");
+    background-image: url("../assets/index-quiz.jpg");
 }
 
 .index {
