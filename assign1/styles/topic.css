@@ -9,7 +9,6 @@
 
 
 /* Columns */
-
 * {
     box-sizing: border-box;
 }
@@ -31,6 +30,25 @@
 @media screen and (max-width: 700px) {
     .column {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 701px) {
+
+    .topic-growth {
+        margin-top: 150px;
+    }
+
+    .topic-competition {
+        margin-top: 450px;
+    }
+
+    .topic-definitions {
+        margin-top: 350px;
+    }
+
+    .topic-table {
+        margin-top: 120px;
     }
 }
 
@@ -76,7 +94,6 @@
     border-color: #111111;
     padding: 3px;
     background-color: #333333;
-    margin-top: 150px;
 }
 
 .topic-growth h1 {
@@ -87,19 +104,19 @@
     padding: 3px;
     background-color: #333333;
     width: fit-content;
-    position: relative;
     clear: both;
-    top: 150px;
+}
+
+.topic-growth figure {
+    margin-top: 100px;
 }
 
 .topic-growth figure a img {
     width: 400px;
     height: 510px;
-    position: relative;
 }
 
 .topic-growth figure figcaption {
-    position: relative;
     font-size: 15px;
     color: #fff;
     border-style: solid;
@@ -121,8 +138,6 @@
     background-color: #333333;
     width: fit-content;
     clear: both;
-    position: relative;
-
 }
 
 .topic-competition p {
@@ -133,8 +148,6 @@
     border-color: #111111;
     padding: 3px;
     background-color: #333333;
-    /* width: 50%; */
-    position: relative;
 }
 
 .topic-table h1 {
@@ -146,12 +159,10 @@
     background-color: #333333;
     width: fit-content;
     clear: both;
-    position: relative;
 }
 
 .topic-table table {
     background-color: #333333;
-    position: relative;
 }
 
 .topic-table tr,
@@ -175,7 +186,6 @@ td {
     clear: both;
     border: #111111 solid;
     background-color: #333333;
-    position: relative;
 }
 
 .topic-definitions h1 {
