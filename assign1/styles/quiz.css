@@ -1,0 +1,98 @@
+.quiz {
+    width: 650px;
+    background: rgb(44, 44, 44);
+    color: white;
+    border: #111111 solid;
+    /* margin: 5px; */
+    padding: 20px 10px 40px 10px;
+}
+
+.quiz h1 {
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.quiz hr {
+    margin-bottom: 15px;
+}
+
+.quiz #h2,
+.quiz h2 {
+    font-size: 1.5em;
+    margin-top: 0px;
+    margin-bottom: 14px;
+    text-align: center;
+    font-weight: bold !important;
+}
+
+#quiz-background {
+    justify-content: center;
+    background-image: url("../assets/index-topic.jpg");
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.quiz fieldset {
+    border: none;
+    margin-bottom: 10px;
+}
+
+.quiz legend,
+.quiz #legend {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.quiz input:not([type="checkbox"]):not([type="radio"]) {
+    width: calc(100% - 18px);
+    height: 2em;
+    border: 0;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.quiz select {
+    width: 100%;
+    height: 2em;
+    border: 0;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.quiz input::placeholder {
+    font-size: 1.1em;
+    font-weight: 500;
+    position: relative;
+}
+
+.quiz label input[type="checkbox"] {
+    margin-left: 5px;
+    margin-right: 7px;
+    transform: scale(1.15);
+}
+
+.quiz label input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.15);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.button-container input {
+    margin-left: 10px;
+    margin-right: 10px;
+}

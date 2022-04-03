@@ -27,70 +27,75 @@
     </header>
 
     <main id="quiz-background">
+
         <section class="quiz">
-            <h2 class="ml-5 my-3">Quiz</h2>
+            <h1>Quiz</h1>
 
-
+            <hr />
             <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
-                <fieldset class="mb-3">
-                    <legend>Details</legend>
 
-                    <div class="form-group">
-                        <label for="firstName">First
-                            Name:</label>
-                        <input class="mb-3" type="text" id="firstName" name="firstName" maxlength="15" size="10"
-                            pattern="[A-Za-z]{1,15}" required="required" placeholder="First Name">
-                    </div>
 
-                    <div class="form-group">
-                        <label for="lastName">Last
-                            Name:</label>
-                        <input class="mb-3" type="text" id="lastName" name="lastName" maxlength="15" size="10"
-                            pattern="[A-Za-z]{1,15}" required="required" placeholder="Last Name">
-                    </div>
+                <fieldset>
+                    <legend id="h2">
+                        Details
+                    </legend>
 
-                    <div class="form-group">
-                        <label for="studentId">Student ID:</label>
-                        <input type="text" name="studentId" id="studentId" size="10" pattern="\d{7}|\d{10}"
-                            required="required" placeholder="Student ID">
-                    </div>
+                    <label for="firstName" id="legend">First
+                        Name</label>
+                    <br />
+
+                    <input type="text" id="firstName" name="firstName" maxlength="15" size="10" pattern="[A-Za-z]{1,15}"
+                        required="required" placeholder="First Name" />
+                    <br />
+
+                    <label for="lastName" id="legend">Last Name</label>
+                    <br />
+
+                    <input type="text" id="lastName" name="lastName" maxlength="15" size="10" pattern="[A-Za-z]{1,15}"
+                        required="required" placeholder="Last Name" />
+                    <br />
+
+                    <label for="studentId" id="legend">Student ID:</label>
+                    <br />
+
+                    <input type="text" name="studentId" id="studentId" size="10" pattern="\d{7}|\d{10}"
+                        required="required" placeholder="Student ID" />
                 </fieldset>
 
-                <fieldset class="mb-3">
-                    <div class="form-group">
-                        <legend for="question1">Which language does Node.js support natively?</legend>
-                        <input class="mb-2 form-control" type="text" id="question1" name="question1" maxlength="15"
-                            size="10" pattern="[A-Za-z]{1,15}" required="required">
-                    </div>
+                <h2>Questions</h2>
+
+                <fieldset>
+                    <legend for="question1">Which language does Node.js support natively?</legend>
+                    <input type="text" id="question1" name="question1" maxlength="15" size="10" pattern="[A-Za-z]{1,15}"
+                        required="required">
                 </fieldset>
 
-                <fieldset class="mb-3">
-                    <legend>What engine, developed by google, was Node.js built on?</legend>
+                <fieldset>
+                    <legend>What engine, developed by Google, was Node.js built on?</legend>
 
-                    <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v2" id="v2"
-                            required="required">V2</label>
+                    <label><input type="radio" name="question2" value="v2" id="v2" required="required" />V2</label>
 
-                    <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v4" id="v4">V4</label>
+                    <label><input type="radio" name="question2" value="v4" id="v4" />V4</label>
 
-                    <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v6" id="v6">V6</label>
+                    <label><input type="radio" name="question2" value="v6" id="v6" />V6</label>
 
-                    <label class="mr-2"><input class="mr-1" type="radio" name="question2" value="v8" id="v8">V8</label>
+                    <label><input type="radio" name="question2" value="v8" id="v8" />V8</label>
                 </fieldset>
 
-                <fieldset class="mb-3" id="question3">
+                <fieldset id="question3">
                     <legend>Tick all of the following which apply to Node.js.</legend>
 
-                    <label><input class="mr-2" type="checkbox" name="question3[]" value="quicksetup">Quick set
+                    <label><input type="checkbox" name="question3[]" value="quicksetup" />Quick set
                         up</label><br>
 
-                    <label><input class="mr-2" type="checkbox" name="question3[]" value="highrateofgrowth">High
+                    <label><input type="checkbox" name="question3[]" value="highrateofgrowth" />High
                         rate of
                         growth</label><br>
 
-                    <label><input class="mr-2" type="checkbox" name="question3[]" value="multithreaded">Multi-threaded
+                    <label><input type="checkbox" name="question3[]" value="multithreaded" />Multi-threaded
                         paradigm</label><br>
 
-                    <label><input class="mr-2" type="checkbox" name="question3[]" value="javascriptengine">Uses
+                    <label><input type="checkbox" name="question3[]" value="javascriptengine" />Uses
                         the
                         JavaScript
                         Engine</label><br>
@@ -98,7 +103,7 @@
 
                 <fieldset>
                     <legend>Who created Node.js?</legend>
-                    <select class="custom-select mb-3" id="question4" name="question4" required>
+                    <select id="question4" name="question4" required>
                         <option value="">Please Select</option>
 
                         <option value="billgates">Bill Gates</option>
@@ -112,13 +117,14 @@
                 </fieldset>
 
                 <fieldset>
-                    <div class="form-group">
-                        <legend>What year was the initial release date of Node.js?</legend>
-                        <input class="form-control" type="number" id="question5" name="question5" min="1000" max="9999">
-                    </div>
+                    <legend>What year was the initial release date of Node.js?</legend>
+                    <input type="number" id="question5" name="question5" min="1000" max="9999" />
                 </fieldset>
 
-                <button class="btn btn-primary" type="submit">Submit form</button>
+                <div class="button-container">
+                    <input type="reset" name="reset" value="RESET" id="reset">
+                    <input type="submit" name="submit" value="SUBMIT" id="submit">
+                </div>
             </form>
         </section>
     </main>
