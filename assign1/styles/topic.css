@@ -1,3 +1,41 @@
+#topic_body_background {
+    background-image: url("../assets/index-topic.jpg");
+}
+
+
+#topic_body_background h1 {
+    font: 25px sans-serif;
+}
+
+
+/* Columns */
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    background: transparent;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    background: transparent;
+}
+
+@media screen and (max-width: 700px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* End of Columns */
+
 .topic-introduction p {
     font-size: 18px;
     margin: 10px;
@@ -6,8 +44,6 @@
     border-color: #111111;
     padding: 3px;
     background-color: #333333;
-    width: 50%;
-    float: left;
 }
 
 .topic-introduction h1 {
@@ -40,9 +76,7 @@
     border-color: #111111;
     padding: 3px;
     background-color: #333333;
-    width: 50%;
-    position: relative;
-    top: 150px;
+    margin-top: 150px;
 }
 
 .topic-growth h1 {
@@ -62,16 +96,10 @@
     width: 400px;
     height: 510px;
     position: relative;
-    bottom: 300px;
-    left: 63.5%;
 }
 
 .topic-growth figure figcaption {
     position: relative;
-    bottom: 300px;
-    left: 63.25%;
-    margin-right: 20%;
-    margin-bottom: 10px;
     font-size: 15px;
     color: #fff;
     border-style: solid;
@@ -81,6 +109,8 @@
     width: fit-content;
     clear: both;
 }
+
+/* ---- */
 
 .topic-competition h1 {
     margin: 10px;
@@ -92,7 +122,7 @@
     width: fit-content;
     clear: both;
     position: relative;
-    bottom: 275px;
+
 }
 
 .topic-competition p {
@@ -103,9 +133,8 @@
     border-color: #111111;
     padding: 3px;
     background-color: #333333;
-    width: 50%;
+    /* width: 50%; */
     position: relative;
-    bottom: 275px;
 }
 
 .topic-table h1 {
@@ -118,22 +147,19 @@
     width: fit-content;
     clear: both;
     position: relative;
-    bottom: 200px;
 }
 
 .topic-table table {
     background-color: #333333;
     position: relative;
-    bottom: 200px;
-    margin-left: 10px;
 }
 
 .topic-table tr,
 td {
     background-color: #333333;
     color: #fff;
-    width: fit-content;
-    text-align: left;
+    /* width: fit-content;
+    text-align: left; */
     padding: 10px;
 
 }
@@ -145,27 +171,11 @@ td {
 }
 
 
-#topic_body_background {
-    background-image: url("../assets/index-topic.jpg");
-}
-
-#topic_body_background h1 {
-    font: 25px sans-serif;
-}
-
 .topic-definitions {
     clear: both;
     border: #111111 solid;
     background-color: #333333;
     position: relative;
-    bottom: 775px;
-    left: 1000px;
-    width: 25%;
-    /* position: absolute;
-    top: 1200px;
-    right: 200px;
-    max-width: 300px;
-    bottom: 100px; */
 }
 
 .topic-definitions h1 {
@@ -206,7 +216,7 @@ td {
     width: 30%;
     float: right;
     position: fixed;
-    bottom: 300px;
+    bottom: 30px;
     right: 0%;
     text-decoration-line: none;
     padding: 0.2em 0.6em;
