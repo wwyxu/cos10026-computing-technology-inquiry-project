@@ -1,19 +1,19 @@
 /* Background images for the sections */
 
 #index-introduction {
-    background-image: url("./images/index-topic.jpg");
+    background-image: url("./images/index-enhancements2.jpg");
 }
 
 #index-topic {
-    background-image: url("./images/index-enhancements.jpg");
+    background-image: url("./images/index-topic2.jpg");
 }
 
 #index-quiz {
-    background-image: url("./images/index-quiz.jpg");
+    background-image: url("./images/index-quiz2.jpg");
 }
 
 #index-enhancements {
-    background-image: url("./images/index-topic.jpg");
+    background-image: url("./images/index-enhancements2.jpg");
 }
 
 /* General index page settings */
@@ -21,7 +21,7 @@
 .index {
     background-position: center;
     background-size: cover;
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }

@@ -21,7 +21,7 @@ nav ul {
     margin: 0px;
     padding: 0;
     overflow: hidden;
-    background: #000000;
+    background: #d5e8d3;
 }
 
 nav ul .selected {
@@ -38,7 +38,7 @@ nav li {
 
 nav li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 20px 35px;
     text-decoration: none;
