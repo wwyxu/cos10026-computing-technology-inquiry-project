@@ -26,9 +26,13 @@
     text-align: center;
 }
 
-/* Button margins (outside border)*/
+/* Margins and paddings */
 .index-btn-container {
     padding: 2em;
+}
+
+#index-intro-heading {
+    margin-bottom: 2em;
 }
 
 /* Anchor with rectangular background */
