@@ -6,7 +6,6 @@ last modified: 27 April 2022
 description: Style Sheet
 */
 
-
 @import url(./enhancement.css);
 @import url(./footer.css);
 @import url(./navbar.css);
@@ -29,8 +28,9 @@ body main {
     margin-top: 58px !important;
 }
 
+/* columns */
 body {
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
