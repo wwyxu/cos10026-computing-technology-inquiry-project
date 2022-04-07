@@ -1,5 +1,5 @@
 #enhancement_body_background {
-    background-image: url("./images/index-topic.jpg");
+    background-image: url("./images/index-topic2.jpg");
 }
 
 .enhancements {
@@ -15,11 +15,12 @@
 
 .enhancement-card h1 {
     margin: 10px 0px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     border-style: solid;
-    border-color: #111111;
+    border-style: solid;
+    border-color: #2a8f1f;
 
-    background-color: rgba(35, 35, 35, 0.9);
+    background-color: rgba(200, 224, 197, 0.9);
     padding: 13px;
     width: fit-content;
     clear: both;
@@ -28,9 +29,9 @@
 .enhancement-card p {
     font-size: 18px;
     margin: 10px 0px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     border-style: solid;
-    border-color: #111111;
-    background-color: rgba(35, 35, 35, 0.9);
+    border-color: #2a8f1f;
+    background-color: rgba(200, 224, 197, 0.9);
     padding: 13px;
 }

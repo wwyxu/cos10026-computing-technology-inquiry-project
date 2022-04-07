@@ -1,0 +1,26 @@
+@import url(./enhancementLight.css);
+@import url(./footerLight.css);
+@import url(./navbarLight.css);
+@import url(./homeLight.css);
+@import url(./quizLight.css);
+@import url(./topicLight.css);
+
+html {
+    min-height: 100vh;
+    background-color: black;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* navbar offset */
+body main {
+    margin-top: 58px !important;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
