@@ -1,9 +1,27 @@
+/* 
+filename: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+author: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+created: 1 April 2022
+last modified: 27 April 2022
+description: Topic - Light
+*/
+
 #topic_body_background {
     background-image: url("./images/index-topic2.jpg");
 }
 
-#topic_body_background h1 {
-    font: 25px sans-serif bold;
+#topic_body_background main h1 {
+    font: bolder 40px sans-serif;
+    background-color: rgba(200, 224, 197, 0.9);
+    padding: 13px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+#topic_body_background h2 {
+    font: bold 25px sans-serif;
 }
 
 /* Columns */
@@ -16,7 +34,6 @@
     width: 50%;
     padding: 10px;
     background: transparent;
-
 }
 
 .row {
@@ -81,7 +98,7 @@
     padding: 13px;
 }
 
-.topic-introduction h1 {
+.topic-introduction h2 {
     margin: 10px;
     color: black;
     border-style: solid;
@@ -104,6 +121,11 @@
     margin: 10px;
 }
 
+.topic-advantages h3 {
+    font-size: 1.1rem;
+    padding-left: 10px;
+}
+
 .topic-growth p {
     font-size: 18px;
     margin: 10px;
@@ -115,7 +137,7 @@
     padding: 13px;
 }
 
-.topic-growth h1 {
+.topic-growth h2 {
     margin: 10px;
     color: black;
     border-style: solid;
@@ -146,7 +168,7 @@
 
 /* ---- */
 
-.topic-competition h1 {
+.topic-competition h2 {
     margin: 10px 0px;
     color: black;
     border-style: solid;
@@ -168,7 +190,7 @@
     padding: 13px;
 }
 
-.topic-table h1 {
+.topic-table h2 {
     color: black;
     border-style: solid;
     border-color: #2a8f1f;
@@ -186,8 +208,7 @@
     border-color: #2a8f1f;
 }
 
-.topic-table tr,
-td {
+.topic-table thead tr td {
     background-color: rgba(200, 224, 197, 0.9);
     padding: 13px;
     color: black;
@@ -196,18 +217,19 @@ td {
     padding: 10px;
 }
 
-.topic-table thead tr td {
-    background-color: #85b080;
-    padding: 10px;
-    border: 1px solid #212121;
+.topic-table thead {
+    background-color: rgba(62, 130, 89, 0.827);
 }
 
+.topic-table tbody {
+    background-color: rgba(177, 177, 177, 0.827);
+}
 
-.topic-definitions h1 {
+.topic-definitions h2 {
     color: black;
 }
 
-.topic-definitions h1 {
+.topic-definitions h2 {
     margin: 10px;
     color: black;
     border-style: solid;
@@ -235,6 +257,7 @@ td {
     text-align: right;
     font-weight: bold;
     color: black;
+    background-color: rgba(62, 130, 89, 0.827);
     width: fit-content;
 }
 
@@ -242,6 +265,7 @@ td {
     width: fit-content;
     margin-left: 15%;
     color: black;
+    background-color: rgba(177, 177, 177, 0.827);
     margin-bottom: 5px;
 }
 
@@ -250,7 +274,7 @@ td {
     padding: 13px;
 }
 
-#references h1 {
+#references h2 {
     padding: 0px 13px;
     margin: 10px;
     color: white;
@@ -278,7 +302,6 @@ td {
     text-decoration-color: #ccc;
     background-color: rgba(200, 224, 197, 0.9);
     padding: 13px;
-
 }
 
 .side-navigation a:link,

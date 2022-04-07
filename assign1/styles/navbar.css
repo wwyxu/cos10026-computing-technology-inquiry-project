@@ -1,9 +1,17 @@
+/* 
+filename: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+author: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+created: 1 April 2022
+last modified: 27 April 2022
+description: NavBar
+*/
+
 header {
     background-color: #000000;
     position: fixed;
     top: 0px;
     width: 100%;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
     font-weight: 600;
 }
 
@@ -94,20 +102,20 @@ header .menu-checkbox {
     display: none;
 }
 
-header .menu-checkbox:checked ~ .menu {
+header .menu-checkbox:checked~.menu {
     max-height: 300px;
 }
 
-header .menu-checkbox:checked ~ .hamburger-icon .nav-icon {
+header .menu-checkbox:checked~.hamburger-icon .nav-icon {
     background: transparent;
 }
 
-header .menu-checkbox:checked ~ .hamburger-icon .nav-icon:before {
+header .menu-checkbox:checked~.hamburger-icon .nav-icon:before {
     transform: rotate(-45deg);
     top: 0;
 }
 
-header .menu-checkbox:checked ~ .hamburger-icon .nav-icon:after {
+header .menu-checkbox:checked~.hamburger-icon .nav-icon:after {
     transform: rotate(45deg);
     top: 0;
 }

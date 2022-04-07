@@ -1,22 +1,37 @@
+/* 
+filename: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+author: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+created: 1 April 2022
+last modified: 27 April 2022
+description: Enhancements - Light
+*/
+
 #enhancement_body_background {
     background-image: url("./images/index-topic2.jpg");
+}
+
+#enhancement_body_background main h1 {
+    font: bolder 40px sans-serif;
+    background-color: rgba(200, 224, 197, 0.9);
+    padding: 13px 13px 20px 13px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: rgb(0, 0, 0);
 }
 
 .enhancements {
     max-width: 900px;
     margin: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .enhancement-card {
-    margin: 10px;
+    margin: 15px 30px;
 }
 
-.enhancement-card h1 {
+.enhancement-card h2 {
     margin: 10px 0px;
     color: rgb(0, 0, 0);
-    border-style: solid;
     border-style: solid;
     border-color: #2a8f1f;
 

@@ -1,9 +1,27 @@
+/* 
+filename: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+author: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+created: 1 April 2022
+last modified: 27 April 2022
+description: Topic
+*/
+
 #topic_body_background {
     background-image: url("./images/index-topic.jpg");
 }
 
-#topic_body_background h1 {
-    font: 25px sans-serif bold;
+#topic_body_background main h1 {
+    font: bolder 40px sans-serif;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px 13px 20px 13px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+#topic_body_background h2 {
+    font: bold 25px sans-serif;
 }
 
 /* Columns */
@@ -16,7 +34,6 @@
     width: 50%;
     padding: 10px;
     background: transparent;
-
 }
 
 .row {
@@ -42,7 +59,6 @@
 }
 
 @media screen and (min-width: 701px) {
-
     .topic-growth {
         margin-top: 150px;
     }
@@ -81,7 +97,7 @@
     padding: 13px;
 }
 
-.topic-introduction h1 {
+.topic-introduction h2 {
     margin: 10px;
     color: #fff;
     border-style: solid;
@@ -104,6 +120,11 @@
     margin: 10px;
 }
 
+.topic-advantages h3 {
+    font-size: 1.1rem;
+    padding-left: 10px;
+}
+
 .topic-growth p {
     font-size: 18px;
     margin: 10px;
@@ -115,7 +136,7 @@
     padding: 13px;
 }
 
-.topic-growth h1 {
+.topic-growth h2 {
     margin: 10px;
     color: #fff;
     border-style: solid;
@@ -146,7 +167,7 @@
 
 /* ---- */
 
-.topic-competition h1 {
+.topic-competition h2 {
     margin: 10px 0px;
     color: #fff;
     border-style: solid;
@@ -168,7 +189,7 @@
     padding: 13px;
 }
 
-.topic-table h1 {
+.topic-table h2 {
     color: #fff;
     border-style: solid;
     border-color: #111111;
@@ -184,9 +205,7 @@
     padding: 13px;
 }
 
-.topic-table tr,
-td {
-    background-color: rgba(35, 35, 35, 0.9);
+.topic-table tr td {
     padding: 13px;
     color: #fff;
     /* width: fit-content;
@@ -194,18 +213,19 @@ td {
     padding: 10px;
 }
 
-.topic-table thead tr td {
-    background-color: #212121;
-    padding: 10px;
-    border: 1px solid #212121;
+.topic-table thead {
+    background-color: rgba(21, 90, 49, 0.827);
 }
 
+.topic-table tbody {
+    background-color: rgba(90, 90, 90, 0.827);
+}
 
-.topic-definitions h1 {
+.topic-definitions h2 {
     color: #fff;
 }
 
-.topic-definitions h1 {
+.topic-definitions h2 {
     margin: 10px;
     color: #fff;
     border-style: solid;
@@ -233,6 +253,7 @@ td {
     text-align: right;
     font-weight: bold;
     color: #fff;
+    background-color: rgba(21, 90, 49, 0.827);
     width: fit-content;
 }
 
@@ -240,6 +261,7 @@ td {
     width: fit-content;
     margin-left: 15%;
     color: #fff;
+    background-color: rgba(90, 90, 90, 0.827);
     margin-bottom: 5px;
 }
 
@@ -248,7 +270,7 @@ td {
     padding: 13px;
 }
 
-#references h1 {
+#references h2 {
     padding: 0px 13px;
     margin: 10px;
     color: white;
@@ -272,11 +294,10 @@ td {
     right: 0%;
     text-decoration-line: none;
     padding: 0.2em 0.6em;
-    border: 4px solid #111111;
+    border: 4px solid #2a7e13;
     text-decoration-color: #ccc;
     background-color: rgba(35, 35, 35, 0.9);
     padding: 13px;
-
 }
 
 .side-navigation a:link,
