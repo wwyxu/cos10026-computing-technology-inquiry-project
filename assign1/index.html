@@ -13,18 +13,19 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a class="logo" href="index.html"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
-                </li>
-                <li><a class=" selected" href="index.html">Home</a></li>
-                <li><a href="topic.html">Topic</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="enhancements.html">Enhancements</a></li>
-                <li class="mode"><a href="indexLight.html">Light Mode</a></li>
-            </ul>
-        </nav>
+        <!-- Node.js logo -->
+        <a class="logo" href="index.html"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
+        <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
+        <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
+
+        <!-- Menu -->
+        <ul class="menu">
+            <li><a class="selected" href="index.html">Home</a></li>
+            <li><a href="topic.html">Topic</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="enhancements.html">Enhancements</a></li>
+            <li class="mode"><a href="indexLight.html">Light Mode</a></li>
+        </ul>
     </header>
 
     <main class="index">
@@ -42,8 +43,7 @@
         <section id="index-topic" class="index-links">
             <!-- Topic link section -->
             <h1 class="index-heading">Topic</h1> <!-- Headings -->
-            <h2 class="index-description">Learn about Node.js, a method for writing website backends using JavaScript
-            </h2>
+            <h2 class="index-description">Learn about Node.js, a method for writing website backends using JavaScript</h2>
             <!-- Descriptions -->
             <p class="index-btn-container"><a href="topic.html" class="index-button">Find out more</a></p>
             <!-- Buttons with containers -->
@@ -51,8 +51,7 @@
         <section id="index-quiz" class="index-links">
             <!-- Quiz link section -->
             <h1 class="index-heading">Quiz</h1>
-            <h2 class="index-description">Test your understanding of Node.js, and see if you can get a perfect score
-            </h2>
+            <h2 class="index-description">Test your understanding of Node.js, and see if you can get a perfect score</h2>
             <p class="index-btn-container"><a href="quiz.html" class="index-button">Let's go</a></p>
         </section>
         <section id="index-enhancements" class="index-links">
