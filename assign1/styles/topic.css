@@ -13,7 +13,7 @@ description: Topic
 #topic_body_background main h1 {
     font: bolder 40px sans-serif;
     background-color: rgba(35, 35, 35, 0.9);
-    padding: 13px 13px 20px 13px;
+    padding: 13px;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;

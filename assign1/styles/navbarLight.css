@@ -48,8 +48,9 @@ header li a {
 }
 
 header li a:hover:not(.logo) {
-    background-color: #82b63e;
+    border-bottom: 3px solid #82b63e;
     text-decoration: none !important;
+    transition: 0.2s;
 }
 
 header .menu {
