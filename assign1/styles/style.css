@@ -11,7 +11,6 @@ description: Style Sheet
 @import url(./navbar.css);
 @import url(./home.css);
 @import url(./quiz.css);
-@import url(./footer.css);
 @import url(./topic.css);
 
 * {
