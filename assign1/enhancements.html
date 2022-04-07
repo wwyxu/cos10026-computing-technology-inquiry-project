@@ -13,21 +13,21 @@
 
 <body id="enhancement_body_background">
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a class="logo" href="index.html"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
-                </li>
-                <li><a href=" index.html">Home</a>
-                </li>
-                <li><a href="topic.html">Topic</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a class="selected" href="enhancements.html">Enhancements</a></li>
-                <li class="mode"><a href="enhancementsLight.html">Light Mode</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Node.js logo -->
+        <a class="logo" href="index.html"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
+        <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
+        <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
+        <!-- Menu -->
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topic.html">Topic</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a class="selected" href="enhancements.html">Enhancements</a></li>
+            <li class="mode"><a href="enhancementsLight.html">Light Mode</a></li>
+        </ul>
+    </header>
+    
     <main class="enhancements">
         <section class="enhancement-card">
             <h1>Node.JS Main Competition</h1>
