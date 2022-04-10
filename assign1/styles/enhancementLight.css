@@ -50,3 +50,7 @@ description: Enhancements - Light
     background-color: rgba(200, 224, 197, 0.9);
     padding: 13px;
 }
+
+.enhancements img {
+    max-width: 500px;
+}
