@@ -216,6 +216,11 @@ description: Topic
     background-color: rgba(90, 90, 90, 0.827);
 }
 
+.topic-table th,
+.topic-table td {
+    padding: 5px;
+}
+
 .topic-definitions h2 {
     color: #fff;
 }
@@ -250,6 +255,8 @@ description: Topic
     color: #fff;
     background-color: rgba(21, 90, 49, 0.827);
     width: fit-content;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
 .topic-definitions dd {
@@ -257,6 +264,7 @@ description: Topic
     margin-left: 15%;
     color: #fff;
     background-color: rgba(90, 90, 90, 0.827);
+    padding: 5px;
     margin-bottom: 5px;
 }
 
