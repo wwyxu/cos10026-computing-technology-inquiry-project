@@ -21,6 +21,12 @@ description: Quiz - Light
     color: rgb(0, 0, 0);
 }
 
+@media screen and (max-width: 700px) {
+    .quiz {
+        width: 100% !important;
+    }
+}
+
 .quiz {
     width: 650px;
     background-color: rgba(200, 224, 197, 0.9);
