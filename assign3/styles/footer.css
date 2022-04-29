@@ -1,0 +1,79 @@
+/* 
+filename: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+author: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+created: 1 April 2022
+last modified: 27 April 2022
+description: Footer
+*/
+
+.footer {
+    background-color: #000000;
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-style: italic;
+}
+
+footer .footer-heading {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3.5rem;
+}
+
+footer .footer-heading h1 {
+    margin-bottom: 1.5rem;
+}
+
+footer .footer-heading a {
+    color: #8ba545;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+footer .footer-heading a:hover {
+    color: white;
+    transition: 0.2s ease-out;
+}
+
+footer .footer-email-form h1 {
+    margin-bottom: 1.5rem;
+}
+
+footer #footer-email {
+    width: 240px;
+    height: 35px;
+    border-radius: 3.5px;
+    outline: none;
+    border: none;
+    padding-left: 0.7rem;
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+}
+
+footer #footer-email::placeholder {
+    color: black;
+}
+
+footer #footer-email-btn {
+    align-content: center;
+    background-color: #444444;
+    border: none;
+    border-radius: 3.5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5em 0.5em;
+    margin-top: 12px;
+}
+
+footer #footer-email-btn:hover {
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    background-color: #82b63e;
+    color: white;
+    text-decoration: none;
+}

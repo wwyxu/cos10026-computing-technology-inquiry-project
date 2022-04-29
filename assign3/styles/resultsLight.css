@@ -1,0 +1,82 @@
+/* 
+filename: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+author: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+created: 1 April 2022
+last modified: 27 April 2022
+description: Quiz Results - Light
+*/
+
+/* Background image */
+#results-background {
+    background-image: url("./images/index-topic2.jpg");
+    padding-bottom: 30px;
+}
+
+/* Page heading */
+#results-background h1 {
+    font: bolder 40px sans-serif;
+    background-color: rgba(200, 224, 197, 0.9);
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 700px) {
+    .results {
+        width: 100% !important;
+    }
+}
+
+/* Results box */
+.results {
+    width: 650px;
+    background-color: rgba(200, 224, 197, 0.9);
+    color: black;
+    border: #2a8f1f solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px 20px 10px;
+}
+
+/* Exceeded attempts box */
+.exceeded {
+    text-align: center;
+}
+
+/* Subheadings */
+.results h2 {
+    font-size: 1.5em;
+    margin-top: 0px;
+    margin-bottom: 14px;
+    text-align: center;
+    font-weight: bold !important;
+}
+
+/* Margins and paddings */
+.results-btn-container{
+    padding: 2em;
+    text-align: center;
+}
+
+/* Anchor with rectangular background */
+.results-button {
+    align-content: center;
+    background-color: #444444;
+    border: none;
+    border-radius: 3.5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 0.7em 0.5em;
+}
+
+/* Button transitions colour on hover */
+.results-button:hover {
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    background-color: #2a8f1f;
+    color: white;
+    text-decoration: none;
+}

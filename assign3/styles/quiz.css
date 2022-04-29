@@ -1,0 +1,98 @@
+/* 
+filename: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+author: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+created: 1 April 2022
+last modified: 27 April 2022
+description: Quiz
+*/
+
+#quiz-background {
+    background-image: url("./images/index-topic.jpg");
+    padding-bottom: 30px;
+}
+
+#quiz-background h1 {
+    font: bolder 40px sans-serif;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 700px) {
+    .quiz {
+        width: 100% !important;
+    }
+}
+
+.quiz {
+    width: 650px;
+    background-color: rgba(35, 35, 35, 0.9);
+    color: white;
+    border: #111111 solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px 40px 10px;
+}
+
+.quiz #h2,
+.quiz h2 {
+    font-size: 1.5em;
+    margin-top: 0px;
+    margin-bottom: 14px;
+    text-align: center;
+    font-weight: bold !important;
+}
+
+.quiz fieldset {
+    border: none;
+    margin-bottom: 10px;
+}
+
+.quiz legend,
+.quiz #legend {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.quiz input:not([type="checkbox"]):not([type="radio"]),
+.quiz select {
+    width: 100%;
+    height: 2em;
+    border: 0;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.quiz input::placeholder {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.quiz label input[type="checkbox"] {
+    margin-left: 5px;
+    margin-right: 7px;
+    transform: scale(1.15);
+}
+
+.quiz label input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.15);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.button-container input {
+    margin-left: 10px;
+    margin-right: 10px;
+}
