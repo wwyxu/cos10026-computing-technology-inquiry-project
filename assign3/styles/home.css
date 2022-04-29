@@ -1,0 +1,74 @@
+/* 
+filename: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+author: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+created: 1 April 2022
+last modified: 27 April 2022
+description: Home
+*/
+
+/* Background images for the sections */
+
+#index-introduction {
+    background-image: url("./images/index-topic.jpg");
+}
+
+#index-topic {
+    background-image: url("./images/index-enhancements.jpg");
+}
+
+#index-quiz {
+    background-image: url("./images/index-quiz.jpg");
+}
+
+#index-enhancements {
+    background-image: url("./images/index-topic.jpg");
+}
+
+/* General index page settings */
+
+.index {
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+/* Margins and paddings */
+.index-btn-container {
+    padding: 2em;
+}
+
+/* Anchor with rectangular background */
+.index-button {
+    align-content: center;
+    background-color: #444444;
+    border: none;
+    border-radius: 3.5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 0.7em 0.5em;
+}
+
+/* Button transitions colour on hover */
+.index-button:hover {
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    background-color: #82b63e;
+    color: white;
+    text-decoration: none;
+}
+
+/* Font sizes */
+.index-heading {
+    font-size: 2.75em;
+}
+
+.index-description {
+    font-size: 1.3em;
+}
+
+/* No spaces between background images*/
+.index-links {
+    padding: 1.5em;
+}

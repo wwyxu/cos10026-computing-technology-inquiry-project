@@ -1,0 +1,314 @@
+/* 
+filename: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+author: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+created: 1 April 2022
+last modified: 27 April 2022
+description: Topic
+*/
+
+#topic_body_background {
+    background-image: url("./images/index-topic.jpg");
+}
+
+#topic_body_background main h1 {
+    font: bolder 40px sans-serif;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+#topic_body_background h2 {
+    font: bold 25px sans-serif;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    background: transparent;
+}
+
+.row {
+    max-width: 1300px;
+    margin: auto
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    background: transparent;
+}
+
+@media screen and (max-width: 700px) {
+    .column {
+        width: 100%;
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .topic-growth {
+        margin-top: 150px;
+    }
+
+    .topic-growth figure {
+        margin-top: 100px;
+    }
+
+    .topic-competition {
+        margin-top: 450px;
+    }
+
+    .topic-definitions {
+        margin-top: 350px;
+    }
+
+    .topic-table {
+        margin-top: 120px;
+    }
+
+    .topic-advantages {
+        margin-left: 10% !important;
+    }
+}
+
+/* End of Columns */
+
+.topic-introduction p {
+    font-size: 18px;
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+}
+
+.topic-introduction h2 {
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+    width: fit-content;
+}
+
+.topic-advantages {
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+    width: fit-content;
+    float: left;
+    margin: 10px;
+}
+
+.topic-advantages h3 {
+    font-size: 1.1rem;
+    padding-left: 10px;
+}
+
+.topic-growth p {
+    font-size: 18px;
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+}
+
+.topic-growth h2 {
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+    width: fit-content;
+    clear: both;
+}
+
+.topic-growth figure a img {
+    width: 400px;
+    height: 510px;
+}
+
+.topic-growth figure figcaption {
+    font-size: 15px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+    width: fit-content;
+    clear: both;
+}
+
+/* ---- */
+
+.topic-competition h2 {
+    margin: 10px 0px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+    width: fit-content;
+    clear: both;
+}
+
+.topic-competition p {
+    font-size: 18px;
+    margin: 10px 0px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+}
+
+.topic-table h2 {
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+    margin-bottom: 10px;
+    width: fit-content;
+    clear: both;
+}
+
+.topic-table table {
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+}
+
+.topic-table tr td {
+    padding: 13px;
+    color: #fff;
+    /* width: fit-content;
+    text-align: left; */
+    padding: 10px;
+}
+
+.topic-table thead {
+    background-color: rgba(21, 90, 49, 0.827);
+}
+
+.topic-table tbody {
+    background-color: rgba(90, 90, 90, 0.827);
+}
+
+.topic-table th,
+.topic-table td {
+    padding: 5px;
+}
+
+.topic-definitions h2 {
+    color: #fff;
+}
+
+.topic-definitions h2 {
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+    width: fit-content;
+    clear: both;
+}
+
+.topic-definitions dl {
+    padding: 0.5em;
+    font-size: 18px;
+    margin: 10px;
+    color: #fff;
+    border-style: solid;
+    border-color: #111111;
+    padding: 3px;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+}
+
+.topic-definitions dt {
+    text-align: right;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(21, 90, 49, 0.827);
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.topic-definitions dd {
+    width: fit-content;
+    margin-left: 15%;
+    color: #fff;
+    background-color: rgba(90, 90, 90, 0.827);
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#references {
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+}
+
+#references h2 {
+    padding: 0px 13px;
+    margin: 10px;
+    color: white;
+}
+
+#references p {
+    font-size: 10px;
+    margin: 10px;
+    color: #fff;
+    padding: 3px;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+    font-style: italic;
+}
+
+.side-navigation {
+    width: 30%;
+    float: right;
+    position: fixed;
+    bottom: 30px;
+    right: 0%;
+    text-decoration-line: none;
+    padding: 0.2em 0.6em;
+    border: 4px solid #2a7e13;
+    text-decoration-color: #ccc;
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+}
+
+.side-navigation a:link,
+.side-navigation a:visited,
+.side-navigation a:hover,
+.side-navigationa a:active {
+    text-decoration-line: none;
+    text-decoration-color: #ccc;
+    text-decoration: none;
+    color: #ccc;
+}

@@ -6,25 +6,25 @@
     <meta name="keywords" content="Node.js, Technology Inquiry Project" />
     <meta name="author" content="Group 2 - Node.js - Archer, Ben, Callum, Jack and William" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styleLight.css">
     <link rel="icon" type="image/x-icon" href="images/nodejsicon.ico">
     <title>Node.js - Technology Inquiry Project</title>
 </head>
 <body>
 <header>
     <!-- Node.js logo -->
-    <a class="logo" href="index.html"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
+    <a class="logo" href="index.html"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
     <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
     <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
     <!-- Menu -->
     <ul class="menu six-item-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="topic.html">Topic</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="enhancements.html">Enhancements</a></li>
-        <li><a class="selected" href="markquiz.php">Results</a></li>
-        <li class="mode"><a href="markquizLight.php">Light Mode</a></li>
+        <li><a href="indexLight.html">Home</a></li>
+        <li><a href="topicLight.html">Topic</a></li>
+        <li><a href="quizLight.html">Quiz</a></li>
+        <li><a href="enhancementsLight.html">Enhancements</a></li>
+        <li><a class="selected" href="markquizLight.php">Results</a></li>
+        <li class="mode"><a href="markquiz.php">Dark Mode</a></li>
     </ul>
 </header>
 
@@ -58,7 +58,7 @@
 				$localVar = sanitise_input($localVar);
 			} else {
 				// Redirect to form, if process not triggered by a form submit
-				header("location: quiz.html");
+				header("location: quizLight.html");
 			}
 			return $localVar;
 		}
@@ -73,7 +73,7 @@
 				}
 			} else {
 				// Redirect to form, if process not triggered by a form submit
-				header("location: quiz.html");
+				header("location: quizLight.html");
 			}
 			return $localArray;
 		}
@@ -157,7 +157,7 @@
 			echo "<section class='results exceeded'>";
 			echo "<h2>Exceeded Attempt Limit</h2>";
 			echo "<p>Sorry, you have had the maximum amount of attempts for this quiz.</p>";
-			echo "<p class='results-btn-container'><a href='index.html' class='results-button'>Go to the home page</a></p>";
+			echo "<p class='results-btn-container'><a href='indexLight.html' class='results-button'>Go to the home page</a></p>";
 			echo "</section>";
 
 		} else {
@@ -212,7 +212,7 @@
 				incorrectAnswer($q5, $question5, 2009, 5);
 			}
 
-			echo "<p class='results-btn-container'><a href='quiz.html' class='results-button'>Take the quiz again</a></p>";
+			echo "<p class='results-btn-container'><a href='quizLight.html' class='results-button'>Take the quiz again</a></p>";
 			echo "</section>";
 
 			// Insert record into database

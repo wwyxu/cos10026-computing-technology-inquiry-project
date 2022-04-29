@@ -1,0 +1,36 @@
+/* 
+filename: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+author: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+created: 1 April 2022
+last modified: 27 April 2022
+description: Style Sheet - Light
+*/
+
+@import url(./enhancementLight.css);
+@import url(./footerLight.css);
+@import url(./navbarLight.css);
+@import url(./homeLight.css);
+@import url(./quizLight.css);
+@import url(./resultsLight.css);
+@import url(./topicLight.css);
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    background-color: black;
+}
+
+/* navbar offset */
+body main {
+    margin-top: 58px !important;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}

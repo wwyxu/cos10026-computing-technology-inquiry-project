@@ -1,0 +1,36 @@
+/* 
+filename: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+author: Group 2 - Node.js - Archer, Ben, Callum, Jack and William
+created: 1 April 2022
+last modified: 27 April 2022
+description: Style Sheet
+*/
+
+@import url(./enhancement.css);
+@import url(./footer.css);
+@import url(./navbar.css);
+@import url(./home.css);
+@import url(./quiz.css);
+@import url(./results.css);
+@import url(./topic.css);
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    background-color: black;
+}
+
+/* navbar offset */
+body main {
+    margin-top: 58px !important;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
