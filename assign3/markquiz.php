@@ -41,44 +41,9 @@
 			echo "</section>";
 		}
 
-		// Sanitise data
-		function sanitise_input($data) {
-			$data = trim($data);
-			$data = stripslashes($data);
-			$data = htmlspecialchars($data);
-			return $data;
-		}
+		require("functions.php");
 
 		// GET DATA FROM FORM
-
-		// Get data functions
-		function getData($externalVar) {
-			if (isset($_POST[$externalVar])) {
-				$localVar = $_POST[$externalVar];
-				$localVar = sanitise_input($localVar);
-			} else {
-				// Redirect to form, if process not triggered by a form submit
-				header("location: quiz.html");
-			}
-			return $localVar;
-		}
-
-		function getArrayData($externalVar) {
-			if (isset($_POST[$externalVar])) {
-				$localArray = array();
-				$localVar = $_POST[$externalVar];
-				foreach ($localVar as $choice) {
-					$choice = sanitise_input($choice);
-					array_push($localArray, $choice);
-				}
-			} else {
-				// Redirect to form, if process not triggered by a form submit
-				header("location: quiz.html");
-			}
-			return $localArray;
-		}
-
-		// Get form data
 		$firstName = getData('firstName');
 		$lastName = getData('lastName');
 		$studentId = getData('studentId');
@@ -96,132 +61,89 @@
 		$noAttempts = mysqli_fetch_all($attempts);
 		$noAttempts = sizeof($noAttempts) + 1;
 
-		// MARK QUESTIONS
-
-		// Mark question functions
-		function markQuestion($selection, $answer) {
-			if ($selection == $answer) {
-				$i = 1;
-			}
-			return $i;
-		}
-
-		function markQuestionAnd($selection, $answer) {
-			$i = 0;
-			foreach ($selection as $j) {
-				foreach ($answer as $k) {
-					if ($j == $k) {
-						$i += 1;
-					}
-				}
-			}
-
-			$answerSize = sizeof($answer);
-			if ($i != 0) {
-				if ($answerSize / $i == 1) {
-					return 1;
-				} else {
-					return 0;
-				}
-			} else {
-				return 0;
-			}
-		}
-
-		function markQuestionOr($selection, $answer) {
-			foreach ($answer as $option) {
-				if ($selection == $option) {
-					return 1;
-				}
-			}
-		}
-
-		// Mark questions
-		$q1Answer = array("javascript", "js");
-		$question1Lower = strtolower($question1);
-		$q1 = markQuestionOr($question1Lower, $q1Answer);
-		$q2 = markQuestion($question2, "V8");
-		$q3Answer = array("Quick set up", "High rate of growth", "Uses the JavaScript Engine");
-		$q3 = markQuestionAnd($question3, $q3Answer);
-		$q4 = markQuestion($question4, "Ryan Dahl");
-		$q5 = markQuestion($question5, 2009);
+		// TYPE CHECK RESPONSES
+		$firstNameMatch = preg_match("/^[a-zA-Z -]{1,30}$/", $firstName);
+		$lastNameMatch = preg_match("/^[a-zA-Z -]{1,30}$/", $lastName);
+		$studentIdMatch = preg_match("/^(\d{7}|\d{10})$/", $studentId);
+		$q1Match = preg_match("/^[A-Za-z -]{1,15}$/", $question1);
+		$q2Match = preg_match("/^[\dA-Za-z]{1,2}$/", $question2);
+		$q3Match = pregMatchArray("/^[A-Za-z -]{1,26}$/", $question3);
+		$q4Match = preg_match("/^[A-Za-z ]{1,15}$/", $question4);
+		$q5Match = preg_match("/^\d{4}$/", $question5);
 
 		// Final score
-		$attemptScore = $q1 + $q2 + $q3 + $q4 + $q5;
+		$typeCheckScore = $firstNameMatch + $lastNameMatch + $studentIdMatch + $q1Match + $q2Match + $q3Match + $q4Match + $q5Match;
+
+		// MARK QUESTIONS
+		$q1Answer = array("javascript", "js");
+		$question1Lower = strtolower($question1);
+		$q1Mark = markQuestionOr($question1Lower, $q1Answer);
+		$q2Mark = markQuestion($question2, "V8");
+		$q3Answer = array("Quick set up", "High rate of growth", "Uses the JavaScript Engine");
+		$q3Mark = markQuestionAnd($question3, $q3Answer);
+		$q4Mark = markQuestion($question4, "Ryan Dahl");
+		$q5Mark = markQuestion($question5, 2009);
+
+		// Final score
+		$attemptScore = $q1Mark + $q2Mark + $q3Mark + $q4Mark + $q5Mark;
 
 		// DISPLAY RESULTS
-
-		if ($noAttempts > 2) {
-
-			// Exceeded Attempt Limit
-			echo "<section class='results exceeded'>";
-			echo "<h2>Exceeded Attempt Limit</h2>";
-			echo "<p>Sorry, you have had the maximum amount of attempts for this quiz.</p>";
-			echo "<p class='results-btn-container'><a href='index.html' class='results-button'>Go to the home page</a></p>";
-			echo "</section>";
-
-		} else {
-
-			// Details
+		if ($typeCheckScore != 8) {
+			// Incorrect Types
 			echo "<section class='results'>";
-			echo "<h2>Details</h2>";
-			echo "<p>Name: $firstName $lastName</p>";
-			echo "<p>Student ID: $studentId</p>";
-			echo "<p>Score: $attemptScore</p>";
-			echo "<p>Number of attempts: " . $noAttempts . "</p>";
-
-			// Incorrect Answers
-			if ($attemptScore == 5) {
-				echo "<h2>Congraluations! You got everything correct!</h2>";
-			} else {
-				echo "<h2>Incorrect Answers</h2>";
-
-				// Incorrect answers functions
-				function incorrectAnswer($mark, $givenAnswer, $correctAnswer, $i) {
-					if ($mark != 1) {
-						echo "<h3>Question $i</h3>";
-						echo "<p>Your Answer: $givenAnswer</p>";
-						echo "<p>Correct Answer: $correctAnswer</p>";
-					}
-				}
-
-				function incorrectAnswerArray($mark, $givenAnswer, $correctAnswer, $i) {
-					if ($mark != 1) {
-						echo "<h3>Question $i</h3>";
-						echo "<p>Your Answer: ";
-						echo "<ul>";
-						foreach ($givenAnswer as $choice) {
-							echo "<li>$choice</li>";
-						}
-						echo "</ul>";
-						echo "<p>Correct Answer: </p>";
-						echo "<ul>";
-						foreach ($correctAnswer as $choice) {
-							echo "<li>$choice</li>";
-						}
-						echo "</ul>";
-					}
-				}
-
-				// Display incorrect answers
-				incorrectAnswer($q1, $question1, "JavaScript", 1);
-				incorrectAnswer($q2, $question2, "V8", 2);
-				$question3Answer = array("Quick set up", "High rate of growth", "Uses the JavaScript Engine");
-				incorrectAnswerArray($q3, $question3, $question3Answer, 3);
-				incorrectAnswer($q4, $question4, "Ryan Dahl", 4);
-				incorrectAnswer($q5, $question5, 2009, 5);
-			}
-
-			echo "<p class='results-btn-container'><a href='quiz.html' class='results-button'>Take the quiz again</a></p>";
+			echo "<h2>Error</h2>";
+			incorrectType($firstNameMatch, $firstName, "First Name", "Only up to 30 letters, spaces or hyphens allowed in your first name.", "You must enter your first name.");
+			incorrectType($lastNameMatch, $lastName, "Last Name", "Only up to 30 letters, spaces or hyphens allowed in your last name.", "You must enter your last name.");
+			incorrectType($studentIdMatch, $studentId, "Student ID", "Your student ID must be a 7 or 10 digit number.", "You must enter your Student ID.");
+			incorrectType($q1Match, $question1, "Question 1", "Only up to 15 letters, spaces or hyphens allowed in Question 1.", "You must enter an answer for Question 1.");
+			incorrectType($q2Match, $question2, "Question 2", "Only up to 2 letters or numbers allowed in Question 2.", "You must select an answer for Question 2.");
+			incorrectTypeArray($q3Match, $question3, "Question 3", "Question 3 answers can only have up to 25 letters, spaces or hyphens.", "You must select at least one answer for Question 3.");
+			incorrectType($q4Match, $question4, "Question 4", "Only up to 15 letters or spaces allowed in Question 4.", "You must select an answer for Question 4.");
+			incorrectType($q5Match, $question5, "Question 5", "Only a 4 digit year allowed in Question 5.", "You must enter an answer for Question 5.");
+			echo "<p class='results-btn-container'><a href='quiz.html' class='results-button'>Retry the quiz</a></p>";
 			echo "</section>";
+		} else {
+			if ($noAttempts > 2) {
+				// Exceeded Attempt Limit
+				echo "<section class='results exceeded'>";
+				echo "<h2>Exceeded Attempt Limit</h2>";
+				echo "<p>Sorry, you have had the maximum amount of attempts for this quiz.</p>";
+				echo "<p class='results-btn-container'><a href='index.html' class='results-button'>Go to the home page</a></p>";
+				echo "</section>";
 
-			// Insert record into database
-			$date = date("Y-m-d");
-			$insertQry =
-			"INSERT INTO attempts (dt, first_name, last_name, student_num, attempt_num, attempt_score)
-			VALUES ('$date', '$firstName', '$lastName', $studentId, " . $noAttempts . ", $attemptScore)";
-			mysqli_query($database, $insertQry);
+			} else {
+				// Details
+				echo "<section class='results'>";
+				echo "<h2>Details</h2>";
+				echo "<p>Name: $firstName $lastName</p>";
+				echo "<p>Student ID: $studentId</p>";
+				echo "<p>Score: $attemptScore</p>";
+				echo "<p>Number of attempts: " . $noAttempts . "</p>";
 
+				// Incorrect Answers
+				if ($attemptScore == 5) {
+					echo "<h2>Congraluations! You got everything correct!</h2>";
+				} else {
+					echo "<h2>Incorrect Answers</h2>";
+
+					// Display incorrect answers
+					incorrectAnswer($q1Mark, $question1, "JavaScript", 1);
+					incorrectAnswer($q2Mark, $question2, "V8", 2);
+					$question3Answer = array("Quick set up", "High rate of growth", "Uses the JavaScript Engine");
+					incorrectAnswerArray($q3Mark, $question3, $question3Answer, 3);
+					incorrectAnswer($q4Mark, $question4, "Ryan Dahl", 4);
+					incorrectAnswer($q5Mark, $question5, 2009, 5);
+				}
+				echo "<p class='results-btn-container'><a href='quiz.html' class='results-button'>Take the quiz again</a></p>";
+				echo "</section>";
+
+				// Insert record into database
+				$date = date("Y-m-d");
+				$insertQry =
+				"INSERT INTO attempts (dt, first_name, last_name, student_num, attempt_num, attempt_score)
+				VALUES ('$date', '$firstName', '$lastName', $studentId, " . $noAttempts . ", $attemptScore)";
+				mysqli_query($database, $insertQry);
+			}
 		}
 
 		// Close database and clean up
