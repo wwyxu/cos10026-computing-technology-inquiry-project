@@ -13,7 +13,7 @@
 <body>
 <header>
     <!-- Node.js logo -->
-    <a class="logo" href="index.html"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
+    <a class="logo" href="indexLight.html"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
     <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
     <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
@@ -44,14 +44,14 @@
 		require("functions.php");
 
 		// GET DATA FROM FORM
-		$firstName = getData('firstName');
-		$lastName = getData('lastName');
-		$studentId = getData('studentId');
-		$question1 = getData('question1');
-		$question2 = getData('question2');
-		$question3 = getArrayData('question3');
-		$question4 = getData('question4');
-		$question5 = getData('question5');
+		$firstName = getData('firstName', 'quizLight.html');
+		$lastName = getData('lastName', 'quizLight.html');
+		$studentId = getData('studentId', 'quizLight.html');
+		$question1 = getData('question1', 'quizLight.html');
+		$question2 = getData('question2', 'quizLight.html');
+		$question3 = getArrayData('question3', 'quizLight.html');
+		$question4 = getData('question4', 'quizLight.html');
+		$question5 = getData('question5', 'quizLight.html');
 
 		// Get no. attempts
 		$attemptsQry =

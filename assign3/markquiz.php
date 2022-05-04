@@ -44,14 +44,14 @@
 		require("functions.php");
 
 		// GET DATA FROM FORM
-		$firstName = getData('firstName');
-		$lastName = getData('lastName');
-		$studentId = getData('studentId');
-		$question1 = getData('question1');
-		$question2 = getData('question2');
-		$question3 = getArrayData('question3');
-		$question4 = getData('question4');
-		$question5 = getData('question5');
+		$firstName = getData('firstName', 'quiz.html');
+		$lastName = getData('lastName', 'quiz.html');
+		$studentId = getData('studentId', 'quiz.html');
+		$question1 = getData('question1', 'quiz.html');
+		$question2 = getData('question2', 'quiz.html');
+		$question3 = getArrayData('question3', 'quiz.html');
+		$question4 = getData('question4', 'quiz.html');
+		$question5 = getData('question5', 'quiz.html');
 
 		// Get no. attempts
 		$attemptsQry =
