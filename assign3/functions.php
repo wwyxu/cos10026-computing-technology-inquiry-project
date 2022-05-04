@@ -8,18 +8,18 @@ function sanitise_input($data) {
 }
 
 // Get data functions
-function getData($externalVar) {
+function getData($externalVar, $redirect) {
 	if (isset($_POST[$externalVar])) {
 		$localVar = $_POST[$externalVar];
 		$localVar = sanitise_input($localVar);
 	} else {
 		// Redirect to form, if process not triggered by a form submit
-		header("location: quiz.html");
+		header("location: $redirect");
 	}
 	return $localVar;
 }
 
-function getArrayData($externalVar) {
+function getArrayData($externalVar, $redirect) {
 	if (isset($_POST[$externalVar])) {
 		$localArray = array();
 		$localVar = $_POST[$externalVar];
@@ -29,7 +29,7 @@ function getArrayData($externalVar) {
 		}
 	} else {
 		// Redirect to form, if process not triggered by a form submit
-		header("location: quiz.html");
+		header("location: $redirect");
 	}
 	return $localArray;
 }
