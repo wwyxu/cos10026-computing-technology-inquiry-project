@@ -93,49 +93,49 @@ function markQuestionOr($selection, $answer) {
 // Incorrect answers functions
 function incorrectAnswer($mark, $givenAnswer, $correctAnswer, $i) {
 	if ($mark != 1) {
-		echo "<h3>Question $i</h3>";
-		echo "<p>Your Answer: $givenAnswer</p>";
-		echo "<p>Correct Answer: $correctAnswer</p>";
+		echo "<h3>Question $i</h3>\n";
+		echo "<p>Your Answer: $givenAnswer</p>\n";
+		echo "<p>Correct Answer: $correctAnswer</p>\n";
 	}
 }
 
 function incorrectAnswerArray($mark, $givenAnswer, $correctAnswer, $i) {
 	if ($mark != 1) {
-		echo "<h3>Question $i</h3>";
-		echo "<p>Your Answer: ";
-		echo "<ul>";
+		echo "<h3>Question $i</h3>\n";
+		echo "<p>Your Answer: </p>\n";
+		echo "<ul>\n";
 		foreach ($givenAnswer as $choice) {
-			echo "<li>$choice</li>";
+			echo "<li>$choice</li>\n";
 		}
-		echo "</ul>";
-		echo "<p>Correct Answer: </p>";
-		echo "<ul>";
+		echo "</ul>\n";
+		echo "<p>Correct Answer: </p>\n";
+		echo "<ul>\n";
 		foreach ($correctAnswer as $choice) {
-			echo "<li>$choice</li>";
+			echo "<li>$choice</li>\n";
 		}
-		echo "</ul>";
+		echo "</ul>\n";
 	}
 }
 
 // Incorrect type functions
 function incorrectType($match, $answer, $i, $message, $nothingMessage) {
 	if ($match != 1) {
-		echo "<h3>$i</h3>";
+		echo "<h3>$i</h3>\n";
 		if ($answer == "") {
-			echo "<p>$nothingMessage</p>";
+			echo "<p>$nothingMessage</p>\n";
 		} else {
-			echo "<p>$message</p>";
+			echo "<p>$message</p>\n";
 		}
 	}
 }
 
 function incorrectTypeArray($match, $answer, $i, $message, $nothingMessage) {
 	if ($match != 1) {
-		echo "<h3>$i</h3>";
+		echo "<h3>$i</h3>\n";
 		if ($answer[0] == "") {
-			echo "<p>$nothingMessage</p>";
+			echo "<p>$nothingMessage</p>\n";
 		} else {
-			echo "<p>$message</p>";
+			echo "<p>$message</p>\n";
 		}
 	}
 }
