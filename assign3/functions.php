@@ -140,4 +140,20 @@ function incorrectTypeArray($match, $answer, $i, $message, $nothingMessage) {
 	}
 }
 
+function print_table($database, $sql) {
+	$result = mysqli_query($database, $sql);
+	$record = mysqli_fetch_assoc($result);
+	echo "<table border='1'>";
+	echo "<tr><th>First Name</th><th>Last Name</th><th>ID</th><th>Attempt</th><th>Score</th></tr>";
+	while ($record) {
+		echo "<tr><td> {$record['first_name']}</td>";
+		echo "<td>{$record['last_name']}</td>";
+		echo "<td>{$record['student_num']}</td>";
+		echo "<td>{$record['attempt_num']}</td>";
+		echo "<td>{$record['attempt_score']}</td></tr>";
+		$record = $record = mysqli_fetch_assoc($result);
+	}
+	echo "<table>";
+	mysqli_close($database);
+}
 ?>
