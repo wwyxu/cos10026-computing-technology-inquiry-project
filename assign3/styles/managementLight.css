@@ -1,0 +1,124 @@
+/* Page backgrounds */
+#queries-background {
+    background-image: url("./images/index-topic2.jpg");
+    padding-bottom: 30px;
+}
+
+#queries_page_background {
+    background-color: #1E1E2E;
+    color: white;
+}
+
+/* Page heading */
+#queries-background h1 {
+    font: bolder 40px sans-serif;
+    background-color: rgba(200, 224, 197, 0.9);
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+#queries_page_background main h1, #queries_page_background main p {
+    margin: 10px;
+}
+
+/* Query box */
+.queries {
+    width: 650px;
+    background-color: rgba(200, 224, 197, 0.9);
+    color: black;
+    border: #2a8f1f solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px 20px 10px;
+}
+
+.queries h2 {
+    font-size: 1.5em;
+    margin-top: 0px;
+    margin-bottom: 14px;
+    text-align: center;
+    font-weight: bold !important;
+}
+
+#query-information {
+    float: right;
+}
+
+.queries input:not([type="checkbox"]):not([type="radio"]),
+.queries select {
+    width: 100%;
+    height: 2em;
+    border: 0;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.button-container input {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.management-page table {
+    background-color: rgba(35, 35, 35, 0.9);
+    padding: 13px;
+}
+
+.management-page tr td {
+    padding: 13px;
+    color: #fff;
+    padding: 10px;
+}
+
+.management-page thead {
+    background-color: rgba(21, 90, 49, 0.827);
+}
+.management-page tbody {
+    background-color: rgba(90, 90, 90, 0.827);
+}
+
+.management-page th,
+.management-page td {
+    padding: 5px;
+}
+
+.management-page {
+    display:flexbox;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.queries label {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (min-width: 1475px) {
+    .query-form {
+        margin-left: unset;
+        position: relative;
+        left: 5em;
+    }
+    .query-information {
+        position: absolute;
+        top: 175px;
+        right: 3em;
+    }
+}
+
+@media screen and (max-width: 896px) {
+    .queries, .management-page {
+        width: 100% !important;
+    }
+}

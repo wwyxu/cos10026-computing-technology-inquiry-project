@@ -48,22 +48,20 @@
 			new mysqli($host, $user, $pwd, $dbname);
 
 			// sql to create table
-			$sql = "CREATE TABLE attempts (
-				attempt_id INT AUTO_INCREMENT PRIMARY KEY,
-				dt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-				first_name VARCHAR(30) NOT NULL,
-				last_name VARCHAR(30) NOT NULL,
-				student_num INT,
-				attempt_num INT,
-				attempt_score INT
+			$sql = "CREATE TABLE IF NOT EXISTS `attempts` (
+				`attempt_id` INT AUTO_INCREMENT PRIMARY KEY,
+				`dt` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+				`first_name` VARCHAR(30) NOT NULL,
+				`last_name` VARCHAR(30) NOT NULL,
+				`student_num` INT,
+				`attempt_num` INT,
+				`attempt_score` INT
 			)";
-
 			// Check if table exists
-			$existsQry = "SELECT * FROM attempts";
-			$result = mysqli_query($database, $existsQry);
-
+			#$existsQry = "SELECT * FROM `attempts`";
+			#$result = mysqli_query($database, $existsQry);
 			// Display error with creating table if table doesn't exist
-			if ($database->query($sql) != TRUE && !$result) {
+			if ($database->query($sql) != TRUE ) {
 				echo "<section class='results'>";
 				echo "<h2>Error</h2>\n";
 				echo "<p>Error creating table: " . $database->error . "</p>\n";
@@ -101,7 +99,7 @@
 					// TYPE CHECK RESPONSES
 					$firstNameMatch = preg_match("/^[a-zA-Z -]{1,30}$/", $firstName);
 					$lastNameMatch = preg_match("/^[a-zA-Z -]{1,30}$/", $lastName);
-					$studentIdMatch = preg_match("/^(\d{7}|\d{10})$/", $studentId);
+					$studentIdMatch = preg_match("/^(\d{7,10})$/", $studentId);
 					$q1Match = preg_match("/^[A-Za-z -]{1,15}$/", $question1);
 					$q2Match = preg_match("/^[\dA-Za-z]{1,2}$/", $question2);
 					$q3Match = pregMatchArray("/^[A-Za-z -]{1,26}$/", $question3);

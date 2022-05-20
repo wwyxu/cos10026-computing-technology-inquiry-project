@@ -13,6 +13,7 @@ description: Style Sheet - Light
 @import url(./quizLight.css);
 @import url(./resultsLight.css);
 @import url(./topicLight.css);
+@import url(./managementLight.css);
 
 * {
     font-family: Arial, Helvetica, sans-serif;
