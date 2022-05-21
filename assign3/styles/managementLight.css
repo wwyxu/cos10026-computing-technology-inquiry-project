@@ -26,7 +26,7 @@
 
 /* Query box */
 .queries {
-    width: 650px;
+    max-width: 100%;
     background-color: rgba(200, 224, 197, 0.9);
     color: black;
     border: #2a8f1f solid;
@@ -102,23 +102,4 @@
 .queries label {
     font-size: 18px;
     font-weight: 500;
-}
-
-@media (min-width: 1475px) {
-    .query-form {
-        margin-left: unset;
-        position: relative;
-        left: 5em;
-    }
-    .query-information {
-        position: absolute;
-        top: 175px;
-        right: 3em;
-    }
-}
-
-@media screen and (max-width: 896px) {
-    .queries, .management-page {
-        width: 100% !important;
-    }
 }
