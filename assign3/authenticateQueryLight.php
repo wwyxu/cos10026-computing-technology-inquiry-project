@@ -25,6 +25,7 @@
             <li><a href="topic.html">Topic</a></li>
             <li><a class="selected" href="quiz.html">Quiz</a></li>
             <li><a href="enhancements.html">Enhancements</a></li>
+            <li><a href="enhancementsLight2.html">PHP Enhancements</a></li>
             <li class="mode"><a href="quizLight.html">Light Mode</a></li>
             <li class="mode selected"><a href="authenticateLight.php">User</a></li>
             <li class="mode"><a href="manageQueryLight.php">⚙</a></li>

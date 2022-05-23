@@ -25,6 +25,7 @@
             <li><a href="topic.html">Topic</a></li>
             <li><a href="quiz.html">Quiz</a></li>
             <li><a href="enhancements.html">Enhancements</a></li>
+            <li><a href="enhancements2.html">PHP Enhancements</a></li>
             <li class="mode selected"><a href="manage.php">⚙</a></li>
         </ul>
     </header>
