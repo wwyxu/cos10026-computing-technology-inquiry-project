@@ -1,7 +1,6 @@
 <?php
-// Replace the login information here
 $host = "feenix-mariadb.swin.edu.au";
-$user = "s103994591";
-$pwd = "sjz9a2vqew";
-$dbname = "s103994591_db";
+$user = "s103972490";
+$pwd = "140397";
+$dbname = "s103972490_db"
 ?>

@@ -31,95 +31,110 @@
     <main>
         <h1>Query Results <input type="button" onclick="history.back();" value="Back"></h1>
         <div class="management-page">
-        <?php
-        require("login.php");
-        require("functions.php");
-        if (isset ($_POST["query"])) {
-            $query = $_POST["query"];
-        }
-        else {
-            header ("location: managequery.html");
-        }
-        if (isset ($_POST["first_name"])) {
-            $first_name = $_POST["first_name"];
-            sanitise_input($first_name);
-        }
-        if (isset ($_POST["last_name"])) {
-            $last_name = $_POST["last_name"];
-            sanitise_input($last_name);
-        }
-        if (isset ($_POST["student_num"])) {
-            $student_num = $_POST["student_num"];
-            sanitise_input($student_num);
-        }
-        if (isset ($_POST["attempt_num"])) {
-            $attempt_num = $_POST["attempt_num"];
-            sanitise_input($attempt_num);
-        }
-        if (isset ($_POST["attempt_score"])) {
-            $attempt_score = $_POST["attempt_score"];
-            sanitise_input($attempt_score);
-        }
-        
-        switch ($query) {
-            case "none":
-                header ("location: managequery.html");
-            case "all":
-                $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts`;";
-                break;
-            case "allforstudent":
-                if (!(($first_name && $last_name) Or $student_num)) {
-                    echo "<p>Error! Name or ID input error. Please go back.</p>";
-                }
-                else {
-                    if ($first_name && $last_name) { $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE first_name = '$first_name' AND last_name = '$last_name';"; }
-                    else { $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE student_num = '$student_num';"; }
-                }
-                break;
-            case "allstudent100":
-                $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE attempt_score = '5' AND attempt_num = '1';";
-                break;
-            case "allstudent50":
-                $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE attempt_score <= '2' AND attempt_num = '2';";
-                break;
-            case "deleteattempt":
-                if (!(($first_name && $last_name) Or $student_num)) {
-                    echo "<p>Error! Name or ID input error. Please go back.</p>";
-                }
-                else {
-                    if ($first_name && $last_name) { $sql = "DELETE FROM `attempts` WHERE first_name = '$first_name' AND last_name = '$last_name';"; }
-                    else { $sql = "DELETE FROM `attempts` WHERE student_num = '$student_num';"; }
-                    echo "<p>Attempts deleted</p>";
-                }
-                break;
-            case "changescore":
-                if (!((($first_name && $last_name) || $student_num) && ($attempt_num != 'none' && $attempt_score != 'none'))) {
-                    echo "<p>Error! Name or input error. Please go back.</p>";
-                }
-                else {
-                    if ($first_name && $last_name) { $sql = "UPDATE `attempts` SET `attempt_score` = '$attempt_score' WHERE `attempt_num` = '$attempt_num' AND `first_name` = '$first_name' AND `last_name` = '$last_name';"; }
-                    else { $sql = "UPDATE `attempts` SET `attempt_score` = '$attempt_score' WHERE `attempt_num` = '$attempt_num' AND `student_num` = '$student_num';"; }
-                    
-                }
-                break;
+            <?php
+            require("login.php");
+            require("functions.php");
+
+            if (isset($_POST["query"])) {
+                $query = $_POST["query"];
+            } else {
+                header("location: managequery.html");
             }
-        if (!$sql) { "<p>Query error</p>"; }
-        else { 
-            $database = @mysqli_connect($host,$user,$pwd,$dbname);
-            if ($query === "deleteattempt") {mysqli_close($database); }
-            elseif ($query === "changescore") {
-                mysqli_query($database, $sql);
-                echo "<p>Update successful</p>";
-                if ($first_name && $last_name) { $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE first_name = '$first_name' AND last_name = '$last_name';"; }
-                else { $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE student_num = '$student_num';"; }
-                print_table($database, $sql);
+
+            if (isset($_POST["first_name"])) {
+                $first_name = $_POST["first_name"];
+                sanitise_input($first_name);
             }
-            else { print_table($database, $sql); }
-        }
-        ?>
+
+            if (isset($_POST["last_name"])) {
+                $last_name = $_POST["last_name"];
+                sanitise_input($last_name);
+            }
+
+            if (isset($_POST["student_num"])) {
+                $student_num = $_POST["student_num"];
+                sanitise_input($student_num);
+            }
+
+            if (isset($_POST["attempt_num"])) {
+                $attempt_num = $_POST["attempt_num"];
+                sanitise_input($attempt_num);
+            }
+
+            if (isset($_POST["attempt_score"])) {
+                $attempt_score = $_POST["attempt_score"];
+                sanitise_input($attempt_score);
+            }
+
+            switch ($query) {
+                case "none":
+                    header("location: managequery.html");
+                case "all":
+                    $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts`;";
+                    break;
+                case "allforstudent":
+                    if (!(($first_name && $last_name) or $student_num)) {
+                        echo "<p>Error! Name or ID input error. Please go back.</p>";
+                    } else {
+                        if ($first_name && $last_name) {
+                            $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE first_name = '$first_name' AND last_name = '$last_name';";
+                        } else {
+                            $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE student_num = '$student_num';";
+                        }
+                    }
+                    break;
+                case "allstudent100":
+                    $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE attempt_score = '5' AND attempt_num = '1';";
+                    break;
+                case "allstudent50":
+                    $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE attempt_score <= '2' AND attempt_num = '2';";
+                    break;
+                case "deleteattempt":
+                    if (!(($first_name && $last_name) or $student_num)) {
+                        echo "<p>Error! Name or ID input error. Please go back.</p>";
+                    } else {
+                        if ($first_name && $last_name) {
+                            $sql = "DELETE FROM `attempts` WHERE first_name = '$first_name' AND last_name = '$last_name';";
+                        } else {
+                            $sql = "DELETE FROM `attempts` WHERE student_num = '$student_num';";
+                        }
+                        echo "<p>Attempts deleted</p>";
+                    }
+                    break;
+                case "changescore":
+                    if (!((($first_name && $last_name) || $student_num) && ($attempt_num != 'none' && $attempt_score != 'none'))) {
+                        echo "<p>Error! Name or input error. Please go back.</p>";
+                    } else {
+                        if ($first_name && $last_name) {
+                            $sql = "UPDATE `attempts` SET `attempt_score` = '$attempt_score' WHERE `attempt_num` = '$attempt_num' AND `first_name` = '$first_name' AND `last_name` = '$last_name';";
+                        } else {
+                            $sql = "UPDATE `attempts` SET `attempt_score` = '$attempt_score' WHERE `attempt_num` = '$attempt_num' AND `student_num` = '$student_num';";
+                        }
+                    }
+                    break;
+            }
+            if (!$sql) {
+                "<p>Query error</p>";
+            } else {
+                $database = @mysqli_connect($host, $user, $pwd, $dbname);
+                if ($query === "deleteattempt") {
+                    mysqli_close($database);
+                } elseif ($query === "changescore") {
+                    mysqli_query($database, $sql);
+                    echo "<p>Update successful</p>";
+                    if ($first_name && $last_name) {
+                        $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE first_name = '$first_name' AND last_name = '$last_name';";
+                    } else {
+                        $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts` WHERE student_num = '$student_num';";
+                    }
+                    print_table($database, $sql);
+                } else {
+                    print_table($database, $sql);
+                }
+            }
+            ?>
         </div>
     </main>
-    
 
     <footer class="footer">
         <div class="footer-heading">
@@ -154,4 +169,5 @@
     </footer>
 
 </body>
+
 </html>

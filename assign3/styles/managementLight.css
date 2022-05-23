@@ -32,7 +32,8 @@
     border: #2a8f1f solid;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px 10px 20px 10px;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 .queries h2 {
