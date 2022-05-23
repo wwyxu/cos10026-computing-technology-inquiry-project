@@ -38,7 +38,7 @@
             if (isset($_POST["query"])) {
                 $query = $_POST["query"];
             } else {
-                header("location: managequery.html");
+                header("location: manageQuery.php");
             }
 
             if (isset($_POST["first_name"])) {
@@ -68,7 +68,7 @@
 
             switch ($query) {
                 case "none":
-                    header("location: managequery.html");
+                    header("location: manageQuery.php");
                 case "all":
                     $sql = "SELECT first_name, last_name, student_num, attempt_num, attempt_score FROM `attempts`;";
                     break;

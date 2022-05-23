@@ -99,7 +99,7 @@
                     echo "</section>";
                 } else {
                     echo "<section class='quiz'>";
-                    echo "<form method='post' action='markquiz.php' novalidate>";
+                    echo "<form method='post' action='markQuiz.php' novalidate>";
                     echo "<h2>Details</h2>";
                     echo "<fieldset>
                     <label for='firstName'>First

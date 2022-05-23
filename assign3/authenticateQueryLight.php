@@ -7,7 +7,7 @@
     <meta name="keywords" content="Node.js, Technology Inquiry Project" />
     <meta name="author" content="Group 2 - Node.js - Archer, Ben, Callum, Jack and William" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styleLight.css">
     <link rel="icon" type="image/x-icon" href="images/nodejsicon.ico">
     <title>Node.js - Technology Inquiry Project</title>
 </head>
@@ -26,8 +26,8 @@
             <li><a class="selected" href="quiz.html">Quiz</a></li>
             <li><a href="enhancements.html">Enhancements</a></li>
             <li class="mode"><a href="quizLight.html">Light Mode</a></li>
-            <li class="mode selected"><a href="authenticate.php">User</a></li>
-            <li class="mode"><a href="manageQuery.php">⚙</a></li>
+            <li class="mode selected"><a href="authenticateLight.php">User</a></li>
+            <li class="mode"><a href="manageQueryLight.php">⚙</a></li>
         </ul>
     </header>
 
@@ -77,8 +77,8 @@
                 } else {
                     echo "<section class='panel'>";
 
-                    $username = getData('username', 'authenticate.php');
-                    $password = getData('password', 'authenticate.php');
+                    $username = getData('username', 'authenticateLight.php');
+                    $password = getData('password', 'authenticateLight.php');
 
                     // var_dump($username);
                     // var_dump($password);

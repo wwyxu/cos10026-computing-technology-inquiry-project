@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Node.js" />
-    <meta name="keywords" content="Node.js, Technology Inquiry Project" />
-    <meta name="author" content="Group 2 - Node.js - Archer, Ben, Callum, Jack and William" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/styleLight.css">
-    <link rel="icon" type="image/x-icon" href="images/nodejsicon.ico">
-    <title>Node.js - Technology Inquiry Project</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="Node.js" />
+	<meta name="keywords" content="Node.js, Technology Inquiry Project" />
+	<meta name="author" content="Group 2 - Node.js - Archer, Ben, Callum, Jack and William" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/styleLight.css">
+	<link rel="icon" type="image/x-icon" href="images/nodejsicon.ico">
+	<title>Node.js - Technology Inquiry Project</title>
 </head>
+
 <body>
-<header>
-    <!-- Node.js logo -->
-    <a class="logo" href="indexLight.html"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
-    <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
-    <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
+	<header>
+		<!-- Node.js logo -->
+		<a class="logo" href="indexLight.html"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
+		<input type="checkbox" class="menu-checkbox" id="menu-checkbox">
+		<label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
-    <!-- Menu -->
-    <ul class="menu six-item-menu">
-        <li><a href="indexLight.html">Home</a></li>
-        <li><a href="topicLight.html">Topic</a></li>
-        <li><a href="quizLight.html">Quiz</a></li>
-        <li><a href="enhancementsLight.html">Enhancements</a></li>
-        <li><a class="selected" href="markquizLight.php">Results</a></li>
-        <li class="mode"><a href="markquiz.php">Dark Mode</a></li>
-    </ul>
-</header>
+		<!-- Menu -->
+		<ul class="menu six-item-menu">
+			<li><a href="indexLight.html">Home</a></li>
+			<li><a href="topicLight.html">Topic</a></li>
+			<li><a href="quizLight.html">Quiz</a></li>
+			<li><a href="enhancementsLight.html">Enhancements</a></li>
+			<li><a class="selected" href="markQuizLight.php">Results</a></li>
+			<!-- <li class="mode"><a href="markQuiz.php">Dark Mode</a></li> -->
+			<li class="mode"><a href="authenticateLight.php">User</a></li>
+			<li class="mode"><a href="manageQueryLight.php">⚙</a></li>
+		</ul>
+	</header>
 
-<main id="results-background">
-	<h1>Quiz Results</h1>
-	<?php
+	<main id="results-background">
+		<h1>Quiz Results</h1>
+		<?php
 		// Login to the database
 		require_once("login.php");
 		$database = @mysqli_connect($host, $user, $pwd, $dbname);
@@ -83,7 +87,7 @@
 
 				// Get no. attempts
 				$attemptsQry =
-				"SELECT attempt_num FROM attempts
+					"SELECT attempt_num FROM attempts
 				WHERE student_num = '$studentId'";
 				$attempts = mysqli_query($database, $attemptsQry);
 
@@ -174,7 +178,7 @@
 						// Insert record into database
 						$date = date("Y-m-d H:i:s +1000"); // Date and time formatting
 						$insertQry =
-						"INSERT INTO attempts (dt, first_name, last_name, student_num, attempt_num, attempt_score)
+							"INSERT INTO attempts (dt, first_name, last_name, student_num, attempt_num, attempt_score)
 						VALUES ('$date', '$firstName', '$lastName', $studentId, " . $noAttempts . ", $attemptScore)";
 						$result = mysqli_query($database, $insertQry);
 
@@ -191,40 +195,41 @@
 			// Close database and clean up
 			mysqli_close($database);
 		}
-	?>
+		?>
 
-</main>
+	</main>
 
-<footer class="footer">
-    <div class="footer-heading">
-        <h1>Group</h1>
-        <a href="mailto:103322558@student.swin.edu.au">Archer</a>
-        <a href="mailto:103619739@student.swin.edu.au">Ben</a>
-        <a href="mailto:103972490@student.swin.edu.au">William</a>
-        <a href="mailto:103994591@student.swin.edu.au">Callum</a>
-        <a href="#mailto:103597767@student.swin.edu.au">Jack</a>
-    </div>
-    <div class="footer-heading">
-        <h1>Contact</h1>
-        <a href="mailto:103322558@student.swin.edu.au">103322558@student.swin.edu.au</a>
-        <a href="mailto:103619739@student.swin.edu.au">103619739@student.swin.edu.au</a>
-        <a href="mailto:103972490@student.swin.edu.au">103972490@student.swin.edu.au</a>
-        <a href="mailto:103994591@student.swin.edu.au">103994591@student.swin.edu.au</a>
-        <a href="mailto:103597767@student.swin.edu.au">103597767@student.swin.edu.au</a>
-    </div>
-    <div class="footer-heading">
-        <h1>About</h1>
-        <a href="http://www.swinburne.edu.au/">School</a>
-        <a href="https://www.investopedia.com/articles/investing/012715/5-richest-people-world.asp">Investors</a>
-        <a href="https://www.entrepreneur.com/article/240492">Blog</a>
-        <a href="https://www.facebook.com">Facebook Page</a>
-    </div>
-    <div class="footer-email-form">
-        <h1>Join our newsletter</h1>
-        <input type="email" placeholder="Enter your email address" id="footer-email">
-        <br />
-        <input type="submit" value="Sign Up" id="footer-email-btn">
-    </div>
-</footer>
+	<footer class="footer">
+		<div class="footer-heading">
+			<h1>Group</h1>
+			<a href="mailto:103322558@student.swin.edu.au">Archer</a>
+			<a href="mailto:103619739@student.swin.edu.au">Ben</a>
+			<a href="mailto:103972490@student.swin.edu.au">William</a>
+			<a href="mailto:103994591@student.swin.edu.au">Callum</a>
+			<a href="#mailto:103597767@student.swin.edu.au">Jack</a>
+		</div>
+		<div class="footer-heading">
+			<h1>Contact</h1>
+			<a href="mailto:103322558@student.swin.edu.au">103322558@student.swin.edu.au</a>
+			<a href="mailto:103619739@student.swin.edu.au">103619739@student.swin.edu.au</a>
+			<a href="mailto:103972490@student.swin.edu.au">103972490@student.swin.edu.au</a>
+			<a href="mailto:103994591@student.swin.edu.au">103994591@student.swin.edu.au</a>
+			<a href="mailto:103597767@student.swin.edu.au">103597767@student.swin.edu.au</a>
+		</div>
+		<div class="footer-heading">
+			<h1>About</h1>
+			<a href="http://www.swinburne.edu.au/">School</a>
+			<a href="https://www.investopedia.com/articles/investing/012715/5-richest-people-world.asp">Investors</a>
+			<a href="https://www.entrepreneur.com/article/240492">Blog</a>
+			<a href="https://www.facebook.com">Facebook Page</a>
+		</div>
+		<div class="footer-email-form">
+			<h1>Join our newsletter</h1>
+			<input type="email" placeholder="Enter your email address" id="footer-email">
+			<br />
+			<input type="submit" value="Sign Up" id="footer-email-btn">
+		</div>
+	</footer>
 </body>
+
 </html>

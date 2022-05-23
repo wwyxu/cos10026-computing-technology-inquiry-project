@@ -37,6 +37,18 @@ description: Quiz - Light
     padding: 20px 10px 40px 10px;
 }
 
+.panel {
+    width: 650px;
+    background-color: rgba(200, 224, 197, 0.9);
+    color: black;
+    border: #2a8f1f solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
 .quiz #h2,
 .quiz h2 {
     font-size: 1.5em;

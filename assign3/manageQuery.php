@@ -25,8 +25,9 @@
             <li><a href="topic.html">Topic</a></li>
             <li><a href="quiz.html">Quiz</a></li>
             <li><a href="enhancements.html">Enhancements</a></li>
-            <li class="mode"><a href="managequeryLight.html">Light Mode</a></li>
-            <li class="mode selected"><a href="managequery.html">⚙</a></li>
+            <li class="mode"><a href="managequeryLight.php">Light Mode</a></li>
+            <li class="mode"><a href="authenticate.php">User</a></li>
+            <li class="mode selected"><a href="managequery.php">⚙</a></li>
         </ul>
     </header>
     <main id="queries-background">
@@ -101,7 +102,7 @@
             </div>
         </div>";
         } else {
-            echo ("<section class='query-information queries'>
+            echo ("<section class='panel'>
             You must be logged in to continue
         </section>");
         }

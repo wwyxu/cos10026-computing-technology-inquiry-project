@@ -7,7 +7,7 @@
     <meta name="keywords" content="Node.js, Technology Inquiry Project" />
     <meta name="author" content="Group 2 - Node.js - Archer, Ben, Callum, Jack and William" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styleLight.css">
     <link rel="icon" type="image/x-icon" href="images/nodejsicon.ico">
     <title>Node.js - Technology Inquiry Project</title>
 </head>
@@ -21,13 +21,13 @@
 
         <!-- Menu -->
         <ul class="menu five-item-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="topic.html">Topic</a></li>
-            <li><a href="quiz.html">Quiz</a></li>
-            <li><a href="enhancements.html">Enhancements</a></li>
-            <li class="mode"><a href="authenticateLight.php">Light Mode</a></li>
-            <li class="mode selected"><a href="authenticate.php">User</a></li>
-            <li class="mode"><a href="manageQuery.php">⚙</a></li>
+            <li><a href="indexLight.html">Home</a></li>
+            <li><a href="topicLight.html">Topic</a></li>
+            <li><a href="quizLight.html">Quiz</a></li>
+            <li><a href="enhancementsLight.html">Enhancements</a></li>
+            <li class="mode"><a href="authenticate.php">Dark Mode</a></li>
+            <li class="mode selected"><a href="authenticateLight.php">User</a></li>
+            <li class="mode"><a href="manageQueryLight.php">⚙</a></li>
         </ul>
     </header>
 
@@ -41,7 +41,7 @@
             echo (' <section class="quiz">
                 <div>Password and Username is "admin"</div>
 
-                <form action="authenticateQuery.php" method="post">
+                <form action="authenticateQueryLight.php" method="post">
                     <label for="username">
                         <input type="text" name="username" placeholder="Username" id="username" required>
                     </label>
