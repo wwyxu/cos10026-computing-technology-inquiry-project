@@ -213,7 +213,7 @@
 						}
 
 						if ($noAttempts == 1) {
-							echo "<p class='results-btn-container'><a href='quiz.html' class='results-button'>Take the quiz again</a></p>\n";
+							echo "<p class='results-btn-container'><a href='quiz.php' class='results-button'>Take the quiz again</a></p>\n";
 							echo "</section>\n";
 						}
 
