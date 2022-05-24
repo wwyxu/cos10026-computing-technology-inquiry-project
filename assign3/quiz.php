@@ -21,11 +21,11 @@
         <ul class="menu five-item-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="topic.html">Topic</a></li>
-            <li><a href="quiz.php">Quiz</a></li>
+            <li><a class="selected href=" quiz.php">Quiz</a></li>
             <li><a href="enhancements.html">Enhancements</a></li>
             <li><a href="enhancements2.html">PHP Enhancements</a></li>
             <li class="mode"><a href="authenticate.php">User</a></li>
-            <li class="mode selected"><a href="quizLight.php">⚙</a></li>
+            <li class="mode"><a href="quizLight.php">⚙</a></li>
         </ul>
     </header>
 
