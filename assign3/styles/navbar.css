@@ -102,12 +102,8 @@ header .menu-checkbox {
     display: none;
 }
 
-header .menu-checkbox:checked~.five-item-menu {
-    max-height: 300px;
-}
-
-header .menu-checkbox:checked~.six-item-menu {
-    max-height: 360px;
+header .menu-checkbox:checked~.menu {
+    max-height: 540px;
 }
 
 header .menu-checkbox:checked~.hamburger-icon .nav-icon {
@@ -124,7 +120,7 @@ header .menu-checkbox:checked~.hamburger-icon .nav-icon:after {
     top: 0;
 }
 
-@media (min-width: 896px) {
+@media (min-width: 1200px) {
     header li {
         float: left;
     }

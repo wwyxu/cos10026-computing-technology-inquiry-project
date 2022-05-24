@@ -20,7 +20,7 @@
         <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
         <!-- Menu -->
-        <ul class="menu five-item-menu">
+        <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="topic.html">Topic</a></li>
             <li><a href="quiz.html">Quiz</a></li>

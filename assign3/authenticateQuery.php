@@ -20,13 +20,13 @@
         <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
         <!-- Menu -->
-        <ul class="menu five-item-menu">
+        <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="topic.html">Topic</a></li>
-            <li><a class="selected" href="quiz.html">Quiz</a></li>
+            <li><a href="quiz.php">Quiz</a></li>
             <li><a href="enhancements.html">Enhancements</a></li>
             <li><a href="enhancements2.html">PHP Enhancements</a></li>
-            <li class="mode"><a href="quizLight.html">Light Mode</a></li>
+            <li class="mode"><a href="authenticateQueryLight.php">Light Mode</a></li>
             <li class="mode selected"><a href="authenticate.php">User</a></li>
             <li class="mode"><a href="manageQuery.php">⚙</a></li>
         </ul>
@@ -38,7 +38,8 @@
         <?php
         session_start();
         require_once("login.php");
-        $database = @mysqli_connect($host, $user, $pwd, $dbname);
+        $database = mysqli_connect($host, $user, $pwd, $dbname);
+        echo $database -> connect_error;
 
         if (!$database) {
             echo "<section class='results'>\n";
