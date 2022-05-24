@@ -25,7 +25,7 @@
 			<li><a href="topicLight.html">Topic</a></li>
 			<li><a href="quizLight.php">Quiz</a></li>
 			<li><a href="enhancementsLight.html">Enhancements</a></li>
-			<li><a href="enhancementsLight2.html">PHP Enhancements</a></li>
+			<li><a href="enhancements2Light.html">PHP Enhancements</a></li>
 			<li><a class="selected" href="markQuizLight.php">Results</a></li>
 			<!-- <li class="mode"><a href="markQuiz.php">Dark Mode</a></li> -->
 			<li class="mode"><a href="authenticateLight.php">User</a></li>
@@ -77,14 +77,14 @@
 				require("functions.php");
 
 				// GET DATA FROM FORM
-				$firstName = getData('firstName', 'quizLight.html');
-				$lastName = getData('lastName', 'quizLight.html');
-				$studentId = getData('studentId', 'quizLight.html');
-				$question1 = getData('question1', 'quizLight.html');
-				$question2 = getData('question2', 'quizLight.html');
-				$question3 = getArrayData('question3', 'quizLight.html');
-				$question4 = getData('question4', 'quizLight.html');
-				$question5 = getData('question5', 'quizLight.html');
+				$firstName = getData('firstName', 'quizLight.php');
+				$lastName = getData('lastName', 'quizLight.php');
+				$studentId = getData('studentId', 'quizLight.php');
+				$question1 = getData('question1', 'quizLight.php');
+				$question2 = getData('question2', 'quizLight.php');
+				$question3 = getArrayData('question3', 'quizLight.php');
+				$question4 = getData('question4', 'quizLight.php');
+				$question5 = getData('question5', 'quizLight.php');
 
 				// Get no. attempts
 				$attemptsQry =
@@ -141,7 +141,7 @@
 						incorrectTypeArray($q3Match, $question3, "Question 3", "Question 3 answers can only have up to 25 letters, spaces or hyphens.", "You must select at least one answer for Question 3.");
 						incorrectType($q4Match, $question4, "Question 4", "Only up to 15 letters or spaces allowed in Question 4.", "You must select an answer for Question 4.");
 						incorrectType($q5Match, $question5, "Question 5", "Only a 4 digit year allowed in Question 5.", "You must enter an answer for Question 5.");
-						echo "<p class='results-btn-container'><a href='quizLight.html' class='results-button'>Retry the quiz</a></p>";
+						echo "<p class='results-btn-container'><a href='quizLight.php' class='results-button'>Retry the quiz</a></p>";
 						echo "</section>\n";
 					} elseif ($noAttempts > 2) {
 						// Exceeded Attempt Limit
@@ -173,7 +173,7 @@
 							incorrectAnswer($q4Mark, $question4, "Ryan Dahl", 4);
 							incorrectAnswer($q5Mark, $question5, 2009, 5);
 						}
-						echo "<p class='results-btn-container'><a href='quizLight.html' class='results-button'>Take the quiz again</a></p>\n";
+						echo "<p class='results-btn-container'><a href='quizLight.php' class='results-button'>Take the quiz again</a></p>\n";
 						echo "</section>\n";
 
 						// Insert record into database
