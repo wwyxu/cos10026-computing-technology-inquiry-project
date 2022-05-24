@@ -25,7 +25,7 @@
             <li><a href="enhancementsLight.html">Enhancements</a></li>
             <li><a href="enhancements2Light.html">PHP Enhancements</a></li>
             <li class="mode"><a href="authenticateLight.php">User</a></li>
-            <li class="mode"><a href="quiz.php">⚙</a></li>
+            <li class="mode"><a href="manageQueryLight.php">⚙</a></li>
         </ul>
     </header>
 
