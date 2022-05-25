@@ -20,12 +20,12 @@
         <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
         <!-- Menu -->
-        <ul class="menu six-item-menu">
+        <ul class="menu">
             <li><a href="indexLight.html">Home</a></li>
             <li><a href="topicLight.html">Topic</a></li>
-            <li><a href="quizLight.html">Quiz</a></li>
+            <li><a href="quizLight.php">Quiz</a></li>
             <li><a href="enhancementsLight.html">Enhancements</a></li>
-            <li><a href="enhancementsLight2.html">PHP Enhancements</a></li>
+            <li><a href="enhancements2Light.html">PHP Enhancements</a></li>
             <li class="mode"><a href="manageQuery.php">Dark Mode</a></li>
             <li class="mode"><a href="authenticateLight.php">User</a></li>
             <li class="mode selected"><a href="manageQueryLight.php">⚙</a></li>

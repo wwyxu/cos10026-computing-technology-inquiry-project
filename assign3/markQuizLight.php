@@ -7,7 +7,7 @@
 	<meta name="keywords" content="Node.js, Technology Inquiry Project" />
 	<meta name="author" content="Group 2 - Node.js - Archer, Ben, Callum, Jack and William" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/styleLight.css">
 	<link rel="icon" type="image/x-icon" href="images/nodejsicon.ico">
 	<title>Node.js - Technology Inquiry Project</title>
 </head>
@@ -15,21 +15,21 @@
 <body>
 	<header>
 		<!-- Node.js logo -->
-		<a class="logo" href="index.html"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
+		<a class="logo" href="indexLight.html"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
 		<input type="checkbox" class="menu-checkbox" id="menu-checkbox">
 		<label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
 		<!-- Menu -->
-		<ul class="menu six-item-menu">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="topic.html">Topic</a></li>
-			<li><a href="quiz.php">Quiz</a></li>
-			<li><a href="enhancements.html">Enhancements</a></li>
-			<li><a href="enhancements2.html">PHP Enhancements</a></li>
-			<li><a class="selected" href="markQuiz.php">Results</a></li>
-			<!-- <li class="mode"><a href="markQuizLight.php">Light Mode</a></li> -->
-			<li class="mode"><a href="authenticate.php">User</a></li>
-			<li class="mode"><a href="manageQuery.php">⚙</a></li>
+		<ul class="menu">
+			<li><a href="indexLight.html">Home</a></li>
+			<li><a href="topicLight.html">Topic</a></li>
+			<li><a href="quizLight.php">Quiz</a></li>
+			<li><a href="enhancementsLight.html">Enhancements</a></li>
+			<li><a href="enhancements2Light.html">PHP Enhancements</a></li>
+			<li><a class="selected" href="markQuizLight.php">Results</a></li>
+			<!-- <li class="mode"><a href="markQuiz.php">Dark Mode</a></li> -->
+			<li class="mode"><a href="authenticateLight.php">User</a></li>
+			<li class="mode"><a href="manageQueryLight.php">⚙</a></li>
 		</ul>
 	</header>
 
@@ -47,50 +47,44 @@
 			echo "<p>Connection error: " . mysqli_connect_error() . "</p>\n";
 			echo "</section>\n";
 		} else {
+
 			// CREATE ATTEMPTS TABLE IF NOT EXISTS
 			new mysqli($host, $user, $pwd, $dbname);
 
 			// sql to create table
-			$sql = "CREATE TABLE IF NOT EXISTS `attempts` (
-				`attempt_id` INT AUTO_INCREMENT PRIMARY KEY,
-				`dt` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-				`first_name` VARCHAR(30) NOT NULL,
-				`last_name` VARCHAR(30) NOT NULL,
-				`student_num` INT,
-				`attempt_num` INT,
-				`attempt_score` INT
+			$sql = "CREATE TABLE attempts (
+				attempt_id INT AUTO_INCREMENT PRIMARY KEY,
+				dt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+				first_name VARCHAR(30) NOT NULL,
+				last_name VARCHAR(30) NOT NULL,
+				student_num INT,
+				attempt_num INT,
+				attempt_score INT
 			)";
+
 			// Check if table exists
-			#$existsQry = "SELECT * FROM `attempts`";
-			#$result = mysqli_query($database, $existsQry);
+			$existsQry = "SELECT * FROM attempts";
+			$result = mysqli_query($database, $existsQry);
+
 			// Display error with creating table if table doesn't exist
-			if ($database->query($sql) != TRUE) {
+			if ($database->query($sql) != TRUE && !$result) {
 				echo "<section class='results'>";
 				echo "<h2>Error</h2>\n";
 				echo "<p>Error creating table: " . $database->error . "</p>\n";
 				echo "</section>";
 			} else {
-				// $query = "SELECT * FROM `questions` ORDER BY RAND () LIMIT 5";
-				// $result = mysqli_query($database, $query);
-				// $rowCount = mysqli_num_rows($result);
 
 				require("functions.php");
 
 				// GET DATA FROM FORM
-				$firstName = getData('firstName', 'quiz.php');
-				$lastName = getData('lastName', 'quiz.php');
-				$studentId = getData('studentId', 'quiz.php');
-				$questionString = getData('questionString', 'quiz.php');
-				$question1 = getData('question1', 'quiz.php');
-				$question2 = getData('question2', 'quiz.php');
-				$question3 = getArrayData('question3', 'quiz.php');
-				$question4 = getData('question4', 'quiz.php');
-				$question5 = getData('question5', 'quiz.php');
-				$question6 = getData('question6', 'quiz.php');
-				$question7 = getData('question7', 'quiz.php');
-
-				$questionArrayString = explode(',', $questionString);
-				$questionArray = array_map('intval', $questionArrayString);
+				$firstName = getData('firstName', 'quizLight.php');
+				$lastName = getData('lastName', 'quizLight.php');
+				$studentId = getData('studentId', 'quizLight.php');
+				$question1 = getData('question1', 'quizLight.php');
+				$question2 = getData('question2', 'quizLight.php');
+				$question3 = getArrayData('question3', 'quizLight.php');
+				$question4 = getData('question4', 'quizLight.php');
+				$question5 = getData('question5', 'quizLight.php');
 
 				// Get no. attempts
 				$attemptsQry =
@@ -111,17 +105,15 @@
 					// TYPE CHECK RESPONSES
 					$firstNameMatch = preg_match("/^[a-zA-Z -]{1,30}$/", $firstName);
 					$lastNameMatch = preg_match("/^[a-zA-Z -]{1,30}$/", $lastName);
-					$studentIdMatch = preg_match("/^(\d{7,10})$/", $studentId);
+					$studentIdMatch = preg_match("/^(\d{7}|\d{10})$/", $studentId);
 					$q1Match = preg_match("/^[A-Za-z -]{1,15}$/", $question1);
 					$q2Match = preg_match("/^[\dA-Za-z]{1,2}$/", $question2);
 					$q3Match = pregMatchArray("/^[A-Za-z -]{1,26}$/", $question3);
 					$q4Match = preg_match("/^[A-Za-z ]{1,15}$/", $question4);
 					$q5Match = preg_match("/^\d{4}$/", $question5);
-					$q6Match = preg_match("/^[A-Za-z -]{1,15}$/", $question6);
-					$q7Match = preg_match("/^[A-Za-z -]{1,15}$/", $question7);
 
 					// Final score
-					$typeCheckScore = $firstNameMatch + $lastNameMatch + $studentIdMatch + $q1Match + $q2Match + $q3Match + $q4Match + $q5Match + $q6Match + $q7Match;
+					$typeCheckScore = $firstNameMatch + $lastNameMatch + $studentIdMatch + $q1Match + $q2Match + $q3Match + $q4Match + $q5Match;
 
 					// MARK QUESTIONS
 					$q1Answer = array("javascript", "js");
@@ -132,11 +124,9 @@
 					$q3Mark = markQuestionAnd($question3, $q3Answer);
 					$q4Mark = markQuestion($question4, "Ryan Dahl");
 					$q5Mark = markQuestion($question5, 2009);
-					$q6Mark = markQuestion($question6, "Full-stack");
-					$q7Mark = markQuestion($question7, "Django");
 
 					// Final score
-					$attemptScore = $q1Mark + $q2Mark + $q3Mark + $q4Mark + $q5Mark + $q6Mark + $q7Mark;
+					$attemptScore = $q1Mark + $q2Mark + $q3Mark + $q4Mark + $q5Mark;
 
 					// DISPLAY RESULTS
 					if ($typeCheckScore != 8) {
@@ -146,45 +136,19 @@
 						incorrectType($firstNameMatch, $firstName, "First Name", "Only up to 30 letters, spaces or hyphens allowed in your first name.", "You must enter your first name.");
 						incorrectType($lastNameMatch, $lastName, "Last Name", "Only up to 30 letters, spaces or hyphens allowed in your last name.", "You must enter your last name.");
 						incorrectType($studentIdMatch, $studentId, "Student ID", "Your student ID must be a 7 or 10 digit number.", "You must enter your Student ID.");
-
-						foreach ($questionArray as $value) {
-							if ($value == 1) {
-								incorrectType($q1Match, $question1, "Error at Question 'What language does Node.js support natively?'. ", "Only up to 15 letters, spaces or hyphens allowed in Question 1.", "You must enter an answer for this question.");
-							}
-
-							if ($value == 2) {
-								incorrectType($q2Match, $question2, "Error at Question 'Which engine, developed by Google, was Node.js built on?'.", "Only up to 2 letters or numbers allowed in Question 2.", "You must select an answer for this question.");
-							}
-
-							if ($value == 3) {
-								incorrectTypeArray($q3Match, $question3, "Error at Question 'Tick all of the following which apply to Node.js'. ", "Question 3 answers can only have up to 25 letters, spaces or hyphens.", "You must select at least one answer for this question.");
-							}
-
-							if ($value == 4) {
-								incorrectType($q4Match, $question4, "Error at Question 'Who created Node.js?'.", "Only up to 15 letters or spaces allowed in Question 4.", "You must select an answer for this question.");
-							}
-
-							if ($value == 5) {
-								incorrectType($q5Match, $question5, "Error at Question 'What year was the initial release year of Node.js?'. ", "Only a 4 digit year allowed in Question 5.", "You must enter an answer for this question.");
-							}
-
-							if ($value == 6) {
-								incorrectType($q6Match, $question6, "Error at Question 'Node.js is used for which type of developement?'.", "Only up to 25 letters or numbers allowed in Question 6.", "You must select an answer for this question.");
-							}
-
-							if ($value == 7) {
-								incorrectType($q7Match, $question7, "Error at Question 'Which of the following is a direct competitor to Node.js'.", "Only up to 25 letters or numbers allowed in Question 7.", "You must select an answer for this question.");
-							}
-						}
-
-						echo "<p class='results-btn-container'><a href='quiz.php' class='results-button'>Retry the quiz</a></p>\n";
+						incorrectType($q1Match, $question1, "Question 1", "Only up to 15 letters, spaces or hyphens allowed in Question 1.", "You must enter an answer for Question 1.");
+						incorrectType($q2Match, $question2, "Question 2", "Only up to 2 letters or numbers allowed in Question 2.", "You must select an answer for Question 2.");
+						incorrectTypeArray($q3Match, $question3, "Question 3", "Question 3 answers can only have up to 25 letters, spaces or hyphens.", "You must select at least one answer for Question 3.");
+						incorrectType($q4Match, $question4, "Question 4", "Only up to 15 letters or spaces allowed in Question 4.", "You must select an answer for Question 4.");
+						incorrectType($q5Match, $question5, "Question 5", "Only a 4 digit year allowed in Question 5.", "You must enter an answer for Question 5.");
+						echo "<p class='results-btn-container'><a href='quizLight.php' class='results-button'>Retry the quiz</a></p>";
 						echo "</section>\n";
 					} elseif ($noAttempts > 2) {
 						// Exceeded Attempt Limit
 						echo "<section class='results exceeded'>\n";
 						echo "<h2>Exceeded Attempt Limit</h2>\n";
 						echo "<p>Sorry, you have had the maximum amount of attempts for this quiz.</p>\n";
-						echo "<p class='results-btn-container'><a href='index.html' class='results-button'>Go to the home page</a></p>\n";
+						echo "<p class='results-btn-container'><a href='indexLight.html' class='results-button'>Go to the home page</a></p>\n";
 						echo "</section>\n";
 					} else {
 						// Details
@@ -208,14 +172,9 @@
 							incorrectAnswerArray($q3Mark, $question3, $question3Answer, 3);
 							incorrectAnswer($q4Mark, $question4, "Ryan Dahl", 4);
 							incorrectAnswer($q5Mark, $question5, 2009, 5);
-							incorrectAnswer($q6Mark, $question6, "Full-stack", 6);
-							incorrectAnswer($q7Mark, $question7, "Django", 7);
 						}
-
-						if ($noAttempts == 1) {
-							echo "<p class='results-btn-container'><a href='quiz.html' class='results-button'>Take the quiz again</a></p>\n";
-							echo "</section>\n";
-						}
+						echo "<p class='results-btn-container'><a href='quizLight.php' class='results-button'>Take the quiz again</a></p>\n";
+						echo "</section>\n";
 
 						// Insert record into database
 						$date = date("Y-m-d H:i:s +1000"); // Date and time formatting
