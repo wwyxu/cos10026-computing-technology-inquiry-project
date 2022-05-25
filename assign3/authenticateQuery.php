@@ -99,8 +99,8 @@
                             $_SESSION['loggedin'] = TRUE;
                             $_SESSION['name'] = $_POST['username'];
                             $_SESSION['id'] = $user['id'];
-                            echo 'Welcome ' . $_SESSION['name'] . '!';
-                            echo '<a href="logout.php">Logout</a>';
+                            echo '<h2>Welcome ' . $_SESSION['name'] . '!</h2>';
+                            echo '<p class="results-btn-container"><a class="results-button" href="logout.php">Logout</a></p>';
                         } else {
                             echo "Password is incorrect, please try again";
                         }

@@ -54,8 +54,8 @@
                  </section>');
         } else {
             echo (' <section class="panel">
-                        <div>You are logged in</div>
-                        <a href="logout.php">Logout</a>
+                        <h2>You are logged in</h2>
+                        <p class="results-btn-container"><a class="results-button" href="logout.php">Logout</a></p>
                     </section>');
         }
         ?>
