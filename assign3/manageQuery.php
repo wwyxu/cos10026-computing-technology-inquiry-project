@@ -26,9 +26,9 @@
             <li><a href="quiz.php">Quiz</a></li>
             <li><a href="enhancements.html">Enhancements</a></li>
             <li><a href="enhancements.html">PHP Enhancements</a></li>
-            <li class="mode"><a href="managequeryLight.php">Light Mode</a></li>
+            <li class="mode"><a href="manageQueryLight.php">Light Mode</a></li>
             <li class="mode"><a href="authenticate.php">User</a></li>
-            <li class="mode selected"><a href="managequery.php">⚙</a></li>
+            <li class="mode selected"><a href="manageQuery.php">⚙</a></li>
         </ul>
     </header>
     <main id="queries-background">
