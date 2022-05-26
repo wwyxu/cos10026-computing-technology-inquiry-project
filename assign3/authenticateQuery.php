@@ -114,7 +114,7 @@
             mysqli_close($database);
         }
         ?>
-
+        </main>
         <footer class="footer">
             <div class="footer-heading">
                 <h1>Group</h1>

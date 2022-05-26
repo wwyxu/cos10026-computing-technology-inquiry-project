@@ -15,7 +15,7 @@
 <body>
     <header>
         <!-- Node.js logo -->
-        <a class="logo" href="index.html"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
+        <a class="logo" href="indexLight.html"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
         <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
         <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
@@ -99,7 +99,7 @@
                             $_SESSION['name'] = $_POST['username'];
                             $_SESSION['id'] = $user['id'];
                             echo '<h2>Welcome ' . $_SESSION['name'] . '!</h2>';
-                            echo '<p class="results-btn-container"><a class="results-button" href="logout.php">Logout</a></p>';
+                            echo '<p class="results-btn-container"><a class="results-button" href="logoutLight.php">Logout</a></p>';
                         } else {
                             echo "Password is incorrect, please try again";
                         }
@@ -113,7 +113,7 @@
             mysqli_close($database);
         }
         ?>
-
+        </main>
         <footer class="footer">
             <div class="footer-heading">
                 <h1>Group</h1>
