@@ -15,7 +15,7 @@
 <body>
     <header>
         <!-- Node.js logo -->
-        <a class="logo" href="index.html"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
+        <a class="logo" href="indexLight.html"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
         <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
         <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
