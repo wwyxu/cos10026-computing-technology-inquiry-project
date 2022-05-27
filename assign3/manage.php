@@ -30,7 +30,7 @@
             <li class="mode selected"><a href="manage.php">⚙</a></li>
         </ul>
     </header>
-    <main>
+    <main id="queries-background">
         <h1>Query Results <input type="button" onclick="history.back();" value="Back"></h1>
         <div class="management-page">
             <?php

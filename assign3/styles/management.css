@@ -1,7 +1,6 @@
 /* Page backgrounds */
 #queries-background {
     background-image: url("./images/index-topic.jpg");
-    padding-bottom: 30px;
 }
 
 #queries_page_background {
@@ -18,10 +17,6 @@
     margin-bottom: 30px;
     text-align: center;
     color: rgb(255, 255, 255);
-}
-
-#queries_page_background main h1, #queries_page_background main p {
-    margin: 10px;
 }
 
 /* Query box */
@@ -71,9 +66,13 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
 .management-page table {
     background-color: rgba(35, 35, 35, 0.9);
     padding: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .management-page tr td {
@@ -82,10 +81,10 @@
     padding: 10px;
 }
 
-.management-page thead {
+.management-page th {
     background-color: rgba(21, 90, 49, 0.827);
 }
-.management-page tbody {
+.management-page td {
     background-color: rgba(90, 90, 90, 0.827);
 }
 
@@ -95,9 +94,7 @@
 }
 
 .management-page {
-    display:flexbox;
     width: 100%;
-    margin-bottom: 10%;
 }
 
 .queries label {
