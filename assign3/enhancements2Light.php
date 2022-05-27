@@ -39,13 +39,19 @@
             <section class="enhancement-card">
                 <h2>Randomize Quiz</h2>
                 <p>
-
+                    The first enhancement was making the quiz dynamically render the questions. The questions, their types, answers (if any for multiple select options), and solution are inserted into the ‘questions’ table. From there, 5 rows are randomly pulled to be displayed to the user.
                 </p>
             </section>
 
             <section class="enhancement-card">
                 <h2>Authentication</h2>
                 <p>
+                    The second enhancement was the implementation of admin login functionality. This page is accessible through the user link in the top right corner of the navigation bar and uses PHP session based storage to achieve authorization. This technique was sourced through the blog post https://codeshack.io/secure-login-system-php-mysql/.
+
+                    Authentication is achieved if the fields the user inputs are equal to any of the rows in the users table, a prefilled table. This comparison check can be done using a where clause to pull rows where the username is equal, if there are none then the user does not exist. If the user exists and the passwords are a match, then the user will be authenticated and the session logged in variable will be set to true.
+                    When authorized the user is granted access the manage query table.
+
+                    Users are be able to log out using the same page. When authorized and on the user page, a button will appear which when clicked will initiate termination of the session and return the user back to the index page.
                 </p>
             </section>
         </div>
