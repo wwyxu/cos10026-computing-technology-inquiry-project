@@ -104,7 +104,7 @@
         </div>";
         } else {
             echo ("<section class='panel'>
-            You must be logged in to continue
+            You must be logged in to continue, please use the User page to log in.
         </section>");
         }
         ?>
