@@ -12,7 +12,7 @@
     <title>Node.js - Technology Inquiry Project</title>
 </head>
 
-<body>
+<body id="enhancement_body_background">
     <header>
         <!-- Node.js logo -->
         <a class="logo" href="indexLight.php"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
@@ -25,46 +25,35 @@
             <li><a href="topicLight.php">Topic</a></li>
             <li><a href="quizLight.php">Quiz</a></li>
             <li><a href="enhancementsLight.php">Enhancements</a></li>
-            <li><a href="enhancements2Light.php">PHP Enhancements</a></li>
-            <li class="mode"><a href="authenticate.php">Dark Mode</a></li>
-            <li class="mode selected"><a href="authenticateLight.php">User</a></li>
+            <li><a class="selected" href="enhancements2Light.php">PHP Enhancements</a></li>
+            <li class="mode"><a href="enhancements2.php">Dark Mode</a></li>
+            <li class="mode"><a href="authenticateLight.php">User</a></li>
             <li class="mode"><a href="manageQueryLight.php">⚙</a></li>
         </ul>
     </header>
 
-    <main id="quiz-background">
-        <h1>Log In</h1>
+    <main>
+        <h1>PHP Enhancements</h1>
 
-        <?php
-        session_start();
+        <div class="enhancements">
+            <section class="enhancement-card">
+                <h2>Randomize Quiz</h2>
+                <p>
 
-        if (!isset($_SESSION['loggedin'])) {
-            echo (' <section class="quiz">
-                <div>Password and Username is "admin"</div>
+                </p>
+            </section>
 
-                <form action="authenticateQueryLight.php" method="post">
-                    <label for="username">
-                        <input type="text" name="username" placeholder="Username" id="username" required>
-                    </label>
-                    <label for="password">
-                        <input type="password" name="password" placeholder="Password" id="password" required>
-                    </label>
-                    <input type="submit" value="Login" />
-                </form>
-                 </section>');
-        } else {
-            echo (' <section class="panel">
-                        <h2>You are logged in</h2>
-                        <p class="results-btn-container"><a class="results-button" href="logoutLight.php">Logout</a></p>
-                    </section>');
-        }
-        ?>
+            <section class="enhancement-card">
+                <h2>Authentication</h2>
+                <p>
+                </p>
+            </section>
+        </div>
     </main>
 
     <?php
     include "footer.inc"
     ?>
-
 </body>
 
 </html>

@@ -15,18 +15,18 @@
 <body>
     <header>
         <!-- Node.js logo -->
-        <a class="logo" href="index.html"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
+        <a class="logo" href="index.php"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
         <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
         <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
         <!-- Menu -->
         <ul class="menu">
-            <li><a class="selected" href="index.html">Home</a></li>
-            <li><a href="topic.html">Topic</a></li>
+            <li><a class="selected" href="index.php">Home</a></li>
+            <li><a href="topic.php">Topic</a></li>
             <li><a href="quiz.php">Quiz</a></li>
-            <li><a href="enhancements.html">Enhancements</a></li>
-            <li><a href="enhancements2.html">PHP Enhancements</a></li>
-            <li class="mode"><a href="indexLight.html">Light Mode</a></li>
+            <li><a href="enhancements.php">Enhancements</a></li>
+            <li><a href="enhancements2.php">PHP Enhancements</a></li>
+            <li class="mode"><a href="indexLight.php">Light Mode</a></li>
             <li class="mode"><a href="authenticate.php">User</a></li>
             <li class="mode"><a href="manageQuery.php">⚙</a></li>
         </ul>
@@ -43,8 +43,7 @@
                 environment Node.js, <br />
                 We are group 2, our team consists of members Archer, Ben, Callum, Jack and William.
             </h2>
-            <p class="index-btn-container"><a href="https://www.youtube.com/watch?v=tDtD4dZ-KFQ&ab_channel=WoundedGoat"
-                    target="_blank" class="index-button">Video</a></p>
+            <p class="index-btn-container"><a href="https://www.youtube.com/watch?v=tDtD4dZ-KFQ&ab_channel=WoundedGoat" target="_blank" class="index-button">Video</a></p>
         </div>
         <section id="index-topic" class="index-links">
             <!-- Topic link section -->
@@ -52,7 +51,7 @@
             <h3 class="index-description">Learn about Node.js, a method for writing website backends using JavaScript
             </h3>
             <!-- Descriptions -->
-            <p class="index-btn-container"><a href="topic.html" class="index-button">Find out more</a></p>
+            <p class="index-btn-container"><a href="topic.php" class="index-button">Find out more</a></p>
             <!-- Buttons with containers -->
         </section>
         <section id="index-quiz" class="index-links">
@@ -66,41 +65,13 @@
             <!-- Enhancements link section -->
             <h2 class="index-heading">Enhancements</h2>
             <h3 class="index-description">See the history of this website, and learn how it has grown and matured</h3>
-            <p class="index-btn-container"><a href="enhancements.html" class="index-button">Find out more</a></p>
+            <p class="index-btn-container"><a href="enhancements.php" class="index-button">Find out more</a></p>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-heading">
-            <h1>Group</h1>
-            <a href="mailto:103322558@student.swin.edu.au">Archer</a>
-            <a href="mailto:103619739@student.swin.edu.au">Ben</a>
-            <a href="mailto:103972490@student.swin.edu.au">William</a>
-            <a href="mailto:103994591@student.swin.edu.au">Callum</a>
-            <a href="#mailto:103597767@student.swin.edu.au">Jack</a>
-        </div>
-        <div class="footer-heading">
-            <h1>Contact</h1>
-            <a href="mailto:103322558@student.swin.edu.au">103322558@student.swin.edu.au</a>
-            <a href="mailto:103619739@student.swin.edu.au">103619739@student.swin.edu.au</a>
-            <a href="mailto:103972490@student.swin.edu.au">103972490@student.swin.edu.au</a>
-            <a href="mailto:103994591@student.swin.edu.au">103994591@student.swin.edu.au</a>
-            <a href="mailto:103597767@student.swin.edu.au">103597767@student.swin.edu.au</a>
-        </div>
-        <div class="footer-heading">
-            <h1>About</h1>
-            <a href="http://www.swinburne.edu.au/">School</a>
-            <a href="https://www.investopedia.com/articles/investing/012715/5-richest-people-world.asp">Investors</a>
-            <a href="https://www.entrepreneur.com/article/240492">Blog</a>
-            <a href="https://www.facebook.com">Facebook Page</a>
-        </div>
-        <div class="footer-email-form">
-            <h1>Join our newsletter</h1>
-            <input type="email" placeholder="Enter your email address" id="footer-email">
-            <br />
-            <input type="submit" value="Sign Up" id="footer-email-btn">
-        </div>
-    </footer>
+    <?php
+    include "footer.inc"
+    ?>
 
 </body>
 

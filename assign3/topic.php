@@ -7,7 +7,7 @@
     <meta name="keywords" content="Node.js, Technology Inquiry Project" />
     <meta name="author" content="Group 2 - Node.js - Archer, Ben, Callum, Jack and William" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/styleLight.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/x-icon" href="images/nodejsicon.ico">
     <title>Node.js - Technology Inquiry Project</title>
 </head>
@@ -15,20 +15,20 @@
 <body id="topic_body_background">
     <header>
         <!-- Node.js logo -->
-        <a class="logo" href="indexLight.html"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
+        <a class="logo" href="index.php"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
         <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
         <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
         <!-- Menu -->
         <ul class="menu">
-            <li><a href="indexLight.html">Home</a></li>
-            <li><a class="selected" href="topicLight.html">Topic</a></li>
-            <li><a href="quizLight.html">Quiz</a></li>
-            <li><a href="enhancementsLight.html">Enhancements</a></li>
-            <li><a href="enhancements2Light.html">PHP Enhancements</a></li>
-            <li class="mode"><a href="topic.html">Dark Mode</a></li>
-            <li class="mode"><a href="authenticateLight.php">User</a></li>
-            <li class="mode"><a href="manageQueryLight.php">⚙</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a class="selected" href="topic.php">Topic</a></li>
+            <li><a href="quiz.php">Quiz</a></li>
+            <li><a href="enhancements.php">Enhancements</a></li>
+            <li><a href="enhancements2.php">PHP Enhancements</a></li>
+            <li class="mode"><a href="topicLight.php">Light Mode</a></li>
+            <li class="mode"><a href="authenticate.php">User</a></li>
+            <li class="mode"><a href="manageQuery.php">⚙</a></li>
         </ul>
     </header>
 
@@ -197,8 +197,7 @@
                             Developer
                             Survey
                             2021, 2022)</figcaption>
-                        <a href="https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages"
-                            target="_blank">
+                        <a href="https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages" target="_blank">
                             <img src="images/SurveyGraphNodejs.png" alt="survey">
                         </a>
                     </figure>
@@ -276,7 +275,7 @@
                 https://github.com/nodejs/TSC [Accessed 28 March 2022].<br>
                 H-online.com. 2022. The Node.js creation story - The H Open: News and Features. [online] Available
                 at:
-                http://www.h-online.com/open/features/The-H-Speed-Guide-to-Node-js-1363974.html%3Fpage=2 [Accessed
+                http://www.h-online.com/open/features/The-H-Speed-Guide-to-Node-js-1363974.php%3Fpage=2 [Accessed
                 28 March
                 2022].
             </p>
@@ -314,37 +313,9 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-heading">
-            <h1>Group</h1>
-            <a href="mailto:103322558@student.swin.edu.au">Archer</a>
-            <a href="mailto:103619739@student.swin.edu.au">Ben</a>
-            <a href="mailto:103972490@student.swin.edu.au">William</a>
-            <a href="mailto:103994591@student.swin.edu.au">Callum</a>
-            <a href="#mailto:103597767@student.swin.edu.au">Jack</a>
-        </div>
-        <div class="footer-heading">
-            <h1>Contact</h1>
-            <a href="mailto:103322558@student.swin.edu.au">103322558@student.swin.edu.au</a>
-            <a href="mailto:103619739@student.swin.edu.au">103619739@student.swin.edu.au</a>
-            <a href="mailto:103972490@student.swin.edu.au">103972490@student.swin.edu.au</a>
-            <a href="mailto:103994591@student.swin.edu.au">103994591@student.swin.edu.au</a>
-            <a href="mailto:103597767@student.swin.edu.au">103597767@student.swin.edu.au</a>
-        </div>
-        <div class="footer-heading">
-            <h1>About</h1>
-            <a href="http://www.swinburne.edu.au/">School</a>
-            <a href="https://www.investopedia.com/articles/investing/012715/5-richest-people-world.asp">Investors</a>
-            <a href="https://www.entrepreneur.com/article/240492">Blog</a>
-            <a href="https://www.facebook.com">Facebook Page</a>
-        </div>
-        <div class="footer-email-form">
-            <h1>Join our newsletter</h1>
-            <input type="email" placeholder="Enter your email address" id="footer-email">
-            <br />
-            <input type="submit" value="Sign Up" id="footer-email-btn">
-        </div>
-    </footer>
+    <?php
+    include "footer.inc"
+    ?>
 
 </body>
 

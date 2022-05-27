@@ -15,17 +15,17 @@
 <body id="queries_page_background">
     <header>
         <!-- Node.js logo -->
-        <a class="logo" href="index.html"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
+        <a class="logo" href="index.php"><img src="images/nodejslogo.png" width="30" alt="logo"></a>
         <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
         <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
         <!-- Menu -->
         <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="topic.html">Topic</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="topic.php">Topic</a></li>
             <li><a href="quiz.php">Quiz</a></li>
-            <li><a href="enhancements.html">Enhancements</a></li>
-            <li><a href="enhancements2.html">PHP Enhancements</a></li>
+            <li><a href="enhancements.php">Enhancements</a></li>
+            <li><a href="enhancements2.php">PHP Enhancements</a></li>
             <li class="mode"><a href="authenticate.php">User</a></li>
             <li class="mode selected"><a href="manage.php">⚙</a></li>
         </ul>

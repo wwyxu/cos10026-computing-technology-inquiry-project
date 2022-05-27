@@ -2,5 +2,4 @@
 session_start();
 session_destroy();
 // Redirect to the login page:
-header('Location: indexLight.html');
-?>
+header('Location: indexLight.php');

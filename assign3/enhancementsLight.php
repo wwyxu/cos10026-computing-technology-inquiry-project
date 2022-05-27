@@ -15,18 +15,18 @@
 <body id="enhancement_body_background">
     <header>
         <!-- Node.js logo -->
-        <a class="logo" href="indexLight.html"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
+        <a class="logo" href="indexLight.php"><img src="images/nodejslogo2.png" width="30" alt="logo"></a>
         <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
         <label class="hamburger-icon" for="menu-checkbox"><span class="nav-icon"></span></label>
 
         <!-- Menu -->
         <ul class="menu">
-            <li><a href="indexLight.html">Home</a></li>
-            <li><a href="topicLight.html">Topic</a></li>
+            <li><a href="indexLight.php">Home</a></li>
+            <li><a href="topicLight.php">Topic</a></li>
             <li><a href="quizLight.php">Quiz</a></li>
-            <li><a class="selected" href="enhancementsLight.html">Enhancements</a></li>
-            <li><a href="enhancements2Light.html">PHP Enhancements</a></li>
-            <li class="mode"><a href="enhancements.html">Dark Mode</a></li>
+            <li><a class="selected" href="enhancementsLight.php">Enhancements</a></li>
+            <li><a href="enhancements2Light.php">PHP Enhancements</a></li>
+            <li class="mode"><a href="enhancements.php">Dark Mode</a></li>
             <li class="mode"><a href="authenticateLight.php">User</a></li>
             <li class="mode"><a href="manageQueryLight.php">⚙</a></li>
         </ul>
@@ -48,8 +48,7 @@
                     <br>
                     This was achieved by creating multiple versions of each CSS and HTML file
                     and linking them appropriately.
-                    By pressing this plus button it will also take you to the light or dark mode.<a
-                        href="enhancements.html">+</a>
+                    By pressing this plus button it will also take you to the light or dark mode.<a href="enhancements.php">+</a>
                 </p>
             </section>
 
@@ -97,37 +96,9 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-heading">
-            <h1>Group</h1>
-            <a href="mailto:103322558@student.swin.edu.au">Archer</a>
-            <a href="mailto:103619739@student.swin.edu.au">Ben</a>
-            <a href="mailto:103972490@student.swin.edu.au">William</a>
-            <a href="mailto:103994591@student.swin.edu.au">Callum</a>
-            <a href="#mailto:103597767@student.swin.edu.au">Jack</a>
-        </div>
-        <div class="footer-heading">
-            <h1>Contact</h1>
-            <a href="mailto:103322558@student.swin.edu.au">103322558@student.swin.edu.au</a>
-            <a href="mailto:103619739@student.swin.edu.au">103619739@student.swin.edu.au</a>
-            <a href="mailto:103972490@student.swin.edu.au">103972490@student.swin.edu.au</a>
-            <a href="mailto:103994591@student.swin.edu.au">103994591@student.swin.edu.au</a>
-            <a href="mailto:103597767@student.swin.edu.au">103597767@student.swin.edu.au</a>
-        </div>
-        <div class="footer-heading">
-            <h1>About</h1>
-            <a href="http://www.swinburne.edu.au/">School</a>
-            <a href="https://www.investopedia.com/articles/investing/012715/5-richest-people-world.asp">Investors</a>
-            <a href="https://www.entrepreneur.com/article/240492">Blog</a>
-            <a href="https://www.facebook.com">Facebook Page</a>
-        </div>
-        <div class="footer-email-form">
-            <h1>Join our newsletter</h1>
-            <input type="email" placeholder="Enter your email address" id="footer-email">
-            <br />
-            <input type="submit" value="Sign Up" id="footer-email-btn">
-        </div>
-    </footer>
+    <?php
+    include "footer.inc"
+    ?>
 </body>
 
 </html>
