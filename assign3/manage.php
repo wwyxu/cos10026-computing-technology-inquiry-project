@@ -31,7 +31,9 @@
         </ul>
     </header>
     <main id="queries-background">
-        <h1>Query Results <input type="button" id="back-btn" onclick="history.back();" value="Back"></h1>
+        <?php
+        echo ('<h1>Query Results <a type="button" id="back-btn" href="manageBack.php">Back<a/></h1>')
+        ?>
         <div class="management-page">
             <?php
             require("login.php");
