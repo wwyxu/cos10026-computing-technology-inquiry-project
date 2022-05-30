@@ -41,6 +41,8 @@
                 <p>
                     The first enhancement was making the quiz dynamically render the questions. The questions, their types, answers (if any for multiple select options), and solution are inserted into the ‘questions’ table. From there, 5 rows are randomly pulled to be displayed to the user.
                 </p>
+
+                <img src="images/randomise.png" width="100%" alt="randomise">
             </section>
 
             <section class="enhancement-card">
@@ -53,6 +55,8 @@
 
                     Users are be able to log out using the same page. When authorized and on the user page, a button will appear which when clicked will initiate termination of the session and return the user back to the index page.
                 </p>
+
+                <img src="images/authenticate-enhancement.png" width="100%" alt="authenticate">
             </section>
         </div>
     </main>

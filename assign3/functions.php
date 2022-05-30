@@ -207,6 +207,6 @@ function print_table($database, $sql)
 		echo "<td>{$record['attempt_score']}</td></tr>";
 		$record = $record = mysqli_fetch_assoc($result);
 	}
-	echo "<table>";
+	echo "</table>";
 	mysqli_close($database);
 }

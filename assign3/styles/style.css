@@ -35,3 +35,20 @@ body {
     margin: 0;
     /* box-sizing: border-box; */
 }
+
+#back-btn {
+    align-content: center;
+    background-color: #444444;
+    border: none;
+    border-radius: 3.5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-size: 20px;
+    padding: 10px;
+} 
+
+
+#back-btn:hover {
+    cursor: pointer;
+} 
